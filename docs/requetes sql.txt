@@ -1,0 +1,2 @@
+
+SELECT * FROM `tarifs` join taux on tarifs.IDTaux=taux.IDTaux WHERE tarifs.NTS like '1006309000'

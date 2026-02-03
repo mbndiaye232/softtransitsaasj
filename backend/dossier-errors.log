@@ -1,0 +1,238 @@
+
+=== DOSSIER CREATION ERROR 2025-12-05T12:51:08.530Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de moteurs de voitures",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "TC",
+  "description": "",
+  "contactId": "",
+  "clientId": "2",
+  "dpiNumber": "2222",
+  "quotationStep": "false",
+  "contactName": "Compagnie Africaine d'Import Export",
+  "contactPhone": "333457687",
+  "contactEmail": "sst@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2025-12-05T12:51:33.751Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_2` FOREIGN KEY (`IdEtapeDossiers`) REFERENCES `etapesdossiers` (`IDEtapesDossiers`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de moteurs de voitures",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "TC",
+  "description": "",
+  "contactId": "",
+  "clientId": "2",
+  "dpiNumber": "2222",
+  "quotationStep": "false",
+  "contactName": "Compagnie Africaine d'Import Export",
+  "contactPhone": "333457687",
+  "contactEmail": "sst@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2025-12-05T13:03:17.167Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de moteurs de voitures",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "TC",
+  "description": "",
+  "contactId": "",
+  "clientId": "2",
+  "dpiNumber": "2222",
+  "quotationStep": "false",
+  "contactName": "Compagnie Africaine d'Import Export",
+  "contactPhone": "333457687",
+  "contactEmail": "sst@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2025-12-05T13:09:25.513Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de moteurs de voitures",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "TC",
+  "description": "",
+  "contactId": "",
+  "clientId": "2",
+  "dpiNumber": "2222",
+  "quotationStep": "false",
+  "contactName": "Compagnie Africaine d'Import Export",
+  "contactPhone": "333457687",
+  "contactEmail": "sst@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2025-12-05T13:10:26.682Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de riz",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "GR",
+  "description": "",
+  "contactId": "",
+  "clientId": "3",
+  "dpiNumber": "44444",
+  "quotationStep": "false",
+  "contactName": "Sénégalaise de produits agricoles",
+  "contactPhone": "",
+  "contactEmail": "mbndiaye@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2025-12-05T13:35:03.913Z ===
+Error message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Error code: ER_NO_REFERENCED_ROW_2
+SQL State: 23000
+SQL Message: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+Stack: Error: Cannot add or update a child row: a foreign key constraint fails (`soft_transit_saas`.`dossiers`, CONSTRAINT `dossiers_ibfk_3` FOREIGN KEY (`IdAgentSaisi`) REFERENCES `agents` (`IDAgents`))
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:91:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Request body: {
+  "label": "Importation de riz",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "GR",
+  "description": "",
+  "contactId": "",
+  "clientId": "3",
+  "dpiNumber": "444448888",
+  "quotationStep": "false",
+  "contactName": "Sénégalaise de produits agricoles",
+  "contactPhone": "",
+  "contactEmail": "mbndiaye@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}
+
+=== DOSSIER CREATION ERROR 2026-01-28T11:37:32.010Z ===
+Error message: Duplicata du champ 'IMP-MA-TC-2026-00001' pour la clef 'dossiers.CodeDossier'
+Error code: ER_DUP_ENTRY
+SQL State: 23000
+SQL Message: Duplicata du champ 'IMP-MA-TC-2026-00001' pour la clef 'dossiers.CodeDossier'
+Stack: Error: Duplicata du champ 'IMP-MA-TC-2026-00001' pour la clef 'dossiers.CodeDossier'
+    at PromisePool.query (C:\softtransitsaasantigravity\backend\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at C:\softtransitsaasantigravity\backend\routes\dossiers.js:117:37
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Request body: {
+  "label": "Test 1",
+  "nature": "IMP",
+  "mode": "MA",
+  "type": "TC",
+  "description": "test note de détail",
+  "contactId": "",
+  "clientId": "2",
+  "dpiNumber": "TEST 1",
+  "quotationStep": "false",
+  "contactName": "Khady",
+  "contactPhone": "773457687",
+  "contactEmail": "khady@sst.best",
+  "observations": ""
+}
+User: {
+  "id": 1,
+  "structur_id": 1,
+  "name": "Mame Mbaye NDIAYE",
+  "email": "mbndiaye@gmail.com",
+  "login": "mbndiaye",
+  "role": "ADMIN",
+  "is_active": 1
+}

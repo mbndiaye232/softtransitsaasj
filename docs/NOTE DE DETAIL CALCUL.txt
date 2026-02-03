@@ -1,0 +1,1156 @@
+
+sGsCleparcours est une chaîne
+//Verif tous les articles ok Ajout code
+gNnbrecoliscalcule=0
+//HDésactiveFiltre(Articles)
+//HFiltre(Articles,IDNotesDeDetails,gnvidnotedetail)
+////TableAffiche(TABLE_Articles)
+//gnnbreligne1=TableOccurrence(TABLE_Articles)
+//gnNumligne=1
+//
+//gbcondition2=Faux
+//TANTQUE gnNumligne<=gnnbreligne1
+//	TableSelectMoins(TABLE_Articles)
+//	TableSelectPlus(TABLE_Articles,gnNumligne)
+//	SI TABLE_Articles.COL_FOB=0 ET TABLE_Articles.COL_CAF=0 ALORS
+//		gnvidarticles=TABLE_Articles.COL_idarticle
+//		gbcondition2=Vrai
+//		req1="delete from liquidationsArticles where IDArticles="+gnvidarticles
+//		SI PAS HExécuteRequêteSQL(gsdSupp2,hVérifieIntégrité,req1) ALORS
+//			Info("Erreur "+ErreurInfo(errComplet))
+//			RETOUR
+//		FIN	
+//		
+//		req2="delete from articles where IDArticles="+gnvidarticles
+//		SI PAS HExécuteRequêteSQL(gsdSupp1,hVérifieIntégrité,req2) ALORS
+//			Info("Erreur "+ErreurInfo(errComplet))
+//			RETOUR
+//		FIN
+//	FIN
+//	
+//	gnNumligne=gnNumligne+1
+//FIN
+//
+//req3="delete from articles where IDNotesDeDetails="+gnvidnotedetail+" and FOB=0 and CAF=0"
+//SI PAS HExécuteRequêteSQL(gsdSupp3,hVérifieIntégrité,req3) ALORS
+//	Info("Erreur "+ErreurInfo(errComplet))
+//	RETOUR
+//FIN
+//
+//TableEnregistre(TABLE_Articles)
+//HDésactiveFiltre(Articles)
+//HFiltre(Articles,IDNotesDeDetails,gnvidnotedetail)
+//TableAffiche(TABLE_Articles)
+
+
+
+gbcondition1=Vrai
+gnnbreligne1=TableOccurrence(TABLE_Articles)
+TANTQUE gbcondition1=Vrai 
+	gnNumligne=1
+	gbcondition1=Faux
+	TANTQUE gnNumligne<=gnnbreligne1
+		TableSelectMoins(TABLE_Articles)
+		TableSelectPlus(TABLE_Articles,gnNumligne)
+		//Info("N° ligne="+gnNumligne+" num article="+TABLE_Articles.COL_NumeroArticle)
+		SI TABLE_Articles.COL_NumeroArticle<>gnNumligne ALORS
+			TABLE_Articles.COL_NumeroArticle=gnNumligne
+			TableEnregistre(TABLE_Articles)
+			
+			HDésactiveFiltre(Articles)
+			HFiltre(Articles,IDNotesDeDetails,gnvidnotedetail)
+			TableAffiche(TABLE_Articles)
+			gbcondition1=Vrai
+		FIN
+		
+		gnNumligne=gnNumligne+1
+	FIN
+	
+FIN
+
+
+
+// Fin VERIF
+
+
+gbBboutongenerersortie=Vrai
+TABLE_NotesDeDetails..Etat=AffichageSansSélection
+//Info("Note de détail bouton gen ="+gnvidnotedetail)
+
+SI gnnumlignesel<>0 ALORS
+	SI ListeSelect(COMBO_Pays)=-1 ALORS
+		ListeSelectPlus(COMBO_Pays,gnnumlignesel)
+	FIN
+FIN
+
+
+
+
+
+SI ListeSelect(COMBO_Pays)=-1 ALORS
+	Info("Veuillez sélectionner la provenance SVP")
+	DonneFocus(COMBO_Pays)
+	RETOUR
+FIN
+ToastAffiche("Veuillez patienter SVP....traitement en cours"+RC+"Vous serez notifié de la fin",toastLong,cvHaut,chCentre,BleuFoncé)
+
+gsSreq18="select nomagent,tel from agents join LiaisonDossiersDeclarants on agents.idagents=LiaisonDossiersDeclarants.idDeclarants where iddossiers='"+gnViddossier+"'"
+SI PAS HExécuteRequêteSQL(gsdJenr140,gsSreq18) ALORS
+	Info("Erreur "+HErreurInfo(hErrComplet))
+	gSdeclarant="ND"
+SINON
+	HLitPremier(gsdJenr140)
+	SI HEnDehors(gsdJenr140) ALORS
+		Info("Veuillez indiquer le déclarant qui a traité le dossier SVP")
+		OuvreSoeur(FEN_Affectation_des_dossiers_aux_agents)
+		RETOUR
+	SINON
+		gSdeclarant=""
+		TANTQUE PAS HEnDehors(gsdJenr140)
+			gSdeclarant=gSdeclarant+gsdJenr140.nomagent
+			//+"- Tel "+gsdJenr140.tel+" "
+			HLitSuivant(gsdJenr140)
+		FIN
+	FIN
+FIN
+
+
+
+req5="select numerotitretransport,idbl from BillofLanding where iddossiers="+gnViddossier
+SI PAS HExécuteRequêteSQL(gsdJenr4,req5) ALORS
+	Info("Erreur "+HErreurInfo)
+	RETOUR
+FIN
+HLitPremier(gsdJenr4)
+SI PAS HEnDehors(gsdJenr4) ALORS
+	gssnumerobl=gsdJenr4.numerotitretransport
+	gnvidbl=gsdJenr4.idbl
+SINON
+	gssnumerobl="ND"
+FIN
+
+
+
+SI gsnaturedossier="IMP" ALORS
+
+gsSreq5="select idArticles,NumeroArticle,NBCOLIS from Articles where idnotesdedetails="+gnvidnotedetail+" and idArticles not in (select idarticles from liquidationsArticles)"
+SI PAS HExécuteRequêteSQL(gsdJenr120,gsSreq5) ALORS
+	Info("erreur "+HErreurInfo(hErrComplet))
+SINON
+	gsch1=""
+	HLitPremier(gsdJenr120)
+	TANTQUE PAS HEnDehors(gsdJenr120)
+		gsch1=gsch1+SansEspace(NumériqueVersChaîne(gsdJenr120.NumeroArticle))+" , "
+		//gNnbrecoliscalcule=gNnbrecoliscalcule+gsdJenr120.NBCOLIS
+		HLitSuivant(gsdJenr120)
+	FIN
+	SI SansEspace(gsch1)<>"" ALORS
+		Info("Attention, veuillez vérifier avant de générer un état de sortie"+RC+"Les articles suivants "+gsch1+" n'ont pas encore été liquidés")
+		SI Confirmer(Non,"Voulez=vous quand même générer l'état de sortie ")<>Oui ALORS
+			RETOUR
+		FIN
+	FIN
+FIN
+FIN
+
+
+
+REQ_SommeEltsArticlesDuneNoteDeDetail.ParamIDNotesDeDetails=gnvidnotedetail
+
+SI PAS HExécuteRequête(REQ_SommeEltsArticlesDuneNoteDeDetail) ALORS
+	Info("Erreur "+HErreurInfo(hErrComplet))
+	RETOUR
+FIN
+
+gmomontantFobEn!devises=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FOB,2)
+gmomontantFretEn!devises=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FRET,2)
+gmoMDeviseAssurances=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_ASSURANCES,2)
+gmoMobtantFOBCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FOBCFA,0)
+gmoMobtantFretCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FRETCFA,0)
+gmmontantAssuranceCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_ASSURANCESCFA,0)
+gmoMCAFCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_CAF,0)
+gNnbrecoliscalcule=REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_NBCOLIS
+
+req3="update NotesDeDetails set MontantFOBTotalCFA='"+gmoMobtantFOBCFATotal+"',MontantFretTotalCFA='"+gmoMobtantFretCFATotal+"',MontantAssuranceTotalCFA='"+gmmontantAssuranceCFATotal+"',MontantFOBTotalDevise='"+gmomontantFobEn!devises+"',MontantFretTotalDevise='"+gmomontantFretEn!devises+"',MontantAssurancesTotalDevise='"+gmoMDeviseAssurances+"',MontantCAFTotalCFA='"+gmoMCAFCFATotal  +"',valide='0'"+" where IDNotesDeDetails='"+gnvidnotedetail+"'"
+SI PAS HExécuteRequêteSQL(gsdMod3,req3) ALORS
+	Info("Erreur "+HErreurInfo(hErrComplet))
+	RETOUR
+FIN
+
+
+
+//gssnumorbus=TABLE_NotesDeDetails.COL_ORBUS
+gsSninea=TABLE_NotesDeDetails.COL_NINEA
+gsrepertoire=TABLE_NotesDeDetails.COL_REPERTOIRE
+gsDPI=TABLE_NotesDeDetails.COL_DPI
+req5="select numerotitretransport,idbl from BillofLanding where iddossiers="+gnViddossier
+SI PAS HExécuteRequêteSQL(gsdJenr4,req5) ALORS
+	Info("Erreur "+HErreurInfo)
+	RETOUR
+FIN
+HLitPremier(gsdJenr4)
+SI PAS HEnDehors(gsdJenr4) ALORS
+	gssnumerobl=gsdJenr4.numerotitretransport
+	gnvidbl=gsdJenr4.idbl
+SINON
+	gssnumerobl="Non disponible"
+FIN
+
+
+gsSninea=TABLE_NotesDeDetails.COL_NINEA
+gsrepertoire=TABLE_NotesDeDetails.COL_REPERTOIRE
+gsprovenance=TABLE_NotesDeDetails.COL_Provenance
+//gssnumorbus=TABLE_NotesDeDetails.COL_ORBUS
+gnvidnotedetail=TABLE_NotesDeDetails.COL_IDNotesDeDetails
+gsDPI=TABLE_NotesDeDetails.COL_DPI
+REQ_OrdreDeTransitDuDossier.ParamIDDossiers=gnViddossier
+SI PAS HExécuteRequête(REQ_OrdreDeTransitDuDossier)  ALORS
+	Info("Erreur "+HErreurInfo(hErrComplet))
+	gSobjetdossier=" ND "
+	gSpoidsnet=" ND "
+	gSnbrecolis=" ND "
+	gSvaleurmarchandisegsvaleurmarchandise=" ND "
+SINON
+	HLitPremier(REQ_OrdreDeTransitDuDossier)
+	SI HEnDehors(REQ_OrdreDeTransitDuDossier) ALORS
+		gSobjetdossier=" ND "
+		gSpoidsnet=" ND "
+		gSnbrecolis=" ND "
+		gSvaleurmarchandisegsvaleurmarchandise=" ND "
+	SINON
+		
+		gSobjetdossier=SansEspace(REQ_OrdreDeTransitDuDossier.NatureProduits)
+		gSpoidsnet=SansEspace(NumériqueVersChaîne(REQ_OrdreDeTransitDuDossier.PoidsNet))
+		gSnbrecolis=SansEspace(NumériqueVersChaîne(REQ_OrdreDeTransitDuDossier.Nbredecolis))
+		gSvaleurmarchandisegsvaleurmarchandise=SansEspace(NumériqueVersChaîne(REQ_OrdreDeTransitDuDossier.ValeurMarchandise))
+	SI gSvaleurmarchandisegsvaleurmarchandise="" ALORS
+		gSvaleurmarchandisegsvaleurmarchandise="ND"
+		FIN
+		
+	FIN
+FIN
+
+req5="select numerotitretransport,idbl from BillofLanding where iddossiers="+gnViddossier
+SI PAS HExécuteRequêteSQL(gsdJenr4,req5) ALORS
+	Info("Erreur "+HErreurInfo)
+	RETOUR
+FIN
+HLitPremier(gsdJenr4)
+SI PAS HEnDehors(gsdJenr4) ALORS
+	gssnumerobl=gsdJenr4.numerotitretransport
+	gnvidbl=gsdJenr4.idbl
+SINON
+	gssnumerobl="ND"
+FIN
+
+SI gSpoidsnet="" ALORS
+
+SI gstypedossier="TC" ALORS
+	REQ_PoidsQuantiteTotalduBL.Paramidblltalvibooking=gnvidbl
+	SI PAS HExécuteRequête(REQ_PoidsQuantiteTotalduBL) ALORS
+		HLitPremier(REQ_PoidsQuantiteTotalduBL)
+		SI PAS HEnDehors(REQ_PoidsQuantiteTotalduBL) ALORS
+			gSpoidsnet=SansEspace(NumériqueVersChaîne(REQ_PoidsQuantiteTotalduBL.la_somme_PoidsTotalNet))
+			gSnbrecolis=SansEspace(NumériqueVersChaîne(REQ_PoidsQuantiteTotalduBL.la_somme_Quantite))
+		FIN
+	FIN
+SINON
+	REQ_PoidsTotalGroupeDuBL.Paramidblltalvibooking=gnvidbl
+	
+		SI PAS HExécuteRequête(REQ_PoidsTotalGroupeDuBL) ALORS
+			HLitPremier(REQ_PoidsTotalGroupeDuBL)
+			SI PAS HEnDehors(REQ_PoidsTotalGroupeDuBL) ALORS
+				gSpoidsnet=SansEspace(NumériqueVersChaîne(Arrondi(REQ_PoidsTotalGroupeDuBL.la_somme_PoidsTaxation)))
+				gSnbrecolis=SansEspace(NumériqueVersChaîne(Arrondi(REQ_PoidsTotalGroupeDuBL.la_somme_nbreconteneurs)))
+			FIN
+		FIN
+	
+	
+FIN
+FIN
+
+
+ToastSupprimeTout()
+OuvreSoeur(FEN_NoteDetailExcel)
+
+
+
+
+
+
+
+Maximise(FEN_NoteDetailExcel)
+//INFO("Dans ND EXCEL nbre colis="+gNnbrecoliscalcule)
+SI gbBboutongenerersortie=Vrai ALORS
+	TableSelectMoins(TABLE_CLIENTS)
+	TableSelectMoins(TABLE_Dossiers)
+	TableSelectMoins(TABLE_NotesDeDetails)
+
+
+
+SI gbBvalidernotedetail=Vrai ALORS
+		BTN_Valider_la_note_de_détail..Visible=Vrai
+		BTN_Valider_la_note_de_détail..Etat=Actif
+	SINON
+		BTN_Valider_la_note_de_détail..Visible=Faux
+		BTN_Valider_la_note_de_détail..Etat=AffichageSeulement	
+FIN
+
+
+
+
+TBLR_NoteDetail..MultiFeuille=Vrai
+
+//SI gbGBNOUVEAU=Vrai ALORS
+	ToastAffiche("Veuillez patienter SVP....traitement en cours"+RC+"Vous serez notifié de la fin",toastLong,cvMilieu,chCentre,BleuFoncé)
+	TableSelectMoins(TABLE_CLIENTS)
+	TableSelectMoins(TABLE_Dossiers)
+	TableSelectMoins(TABLE_NotesDeDetails)
+	//	info("id dossier "+gnViddossier)*
+	
+	
+	
+	//Info("Note de détail excel ="+gnvidnotedetail)
+	
+	gSreq9="select CodeProvenance,Repertoire,Ninea,MontantFOBTotalDevise,MontantFretTotalDevise,MontantAssuranceTotalCFA from NotesDedetails where IDNotesDeDetails='"+gnvidnotedetail+"'"
+	SI PAS HExécuteRequêteSQL(gsdJenr13,gSreq9) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet))
+		RETOUR
+	FIN
+	
+	HLitPremier(gsdJenr13)
+	SI PAS HEnDehors(gsdJenr13) ALORS
+		
+		gSnineanouv=gsdJenr13.ninea
+		gSprovenancenouvuv=gsdJenr13.CodeProvenance
+		//gSorbusnouv=gsdJenr13.Orbus
+		gSrepertoirenouv=gsdJenr13.Repertoire
+		gmomontantFobEn!devises=Arrondi(gsdJenr13.MontantFOBTotalDevise,2)
+		gmomontantFretEn!devises=Arrondi(gsdJenr13.MontantFretTotalDevise,2)
+		gmmontantAssuranceCFATotal=Arrondi(gsdJenr13.MontantAssuranceTotalCFA,0)
+	FIN
+	
+	
+	
+	
+	gnNum2=1
+	gnbre1=TableOccurrence(TABLE_CLIENTS)
+	
+	
+	
+	
+	
+	
+	REQ_NoteDeDetailDossier.ParamIDNotesDeDetails=gnvidnotedetail
+	SI PAS HExécuteRequête(REQ_NoteDeDetailDossier) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet)+RC+gsmesserreur)
+		RETOUR
+	FIN
+	//Info("Note de détail les article="+gnvidnotedetail)
+	req1="select NumeroArticle,iddevisefob,iddevisefret,iddeviseass from Articles where IDNotesDeDetails='"+gnvidnotedetail+"' order by NumeroArticle"
+	SI PAS HExécuteRequêteSQL(gsdJenr1,req1) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet))
+		RETOUR
+	FIN
+	
+
+	
+	
+	HLitPremier(gsdJenr1)
+	gnviddevideFob=gsdJenr1.iddevisefob
+	gnviddevideFret=gsdJenr1.iddevisefret
+	gnviddeviseAssurance=gsdJenr1.iddeviseass
+	
+	
+	REQ_RecupeSymboleDevise.ParamIDDevises=gnviddevideFob
+	SI PAS HExécuteRequête(REQ_RecupeSymboleDevise) ALORS
+		Info("Erreur "+HErreurInfo())
+		gsSymboleDeviseFob="ND"
+		gSlibelledeviseFOB="ND"
+	SINON
+		HLitPremier(REQ_RecupeSymboleDevise)
+		SI HEnDehors(REQ_RecupeSymboleDevise) ALORS
+			gsSymboleDeviseFob="ND"
+			gSlibelledeviseFOB="ND"
+		SINON
+			gsSymboleDeviseFob=REQ_RecupeSymboleDevise.Symbole
+			gSlibelledeviseFOB=REQ_RecupeSymboleDevise.libelle
+		FIN
+	FIN
+	
+	
+	REQ_RecupeSymboleDevise.ParamIDDevises=gnviddevideFret
+	SI PAS HExécuteRequête(REQ_RecupeSymboleDevise) ALORS
+		Info("Erreur "+HErreurInfo())
+		gsSymboleDeviseFret="ND"
+		gSlibelledeviseFret="ND"
+	SINON
+		HLitPremier(REQ_RecupeSymboleDevise)
+		SI HEnDehors(REQ_RecupeSymboleDevise) ALORS
+			gsSymboleDeviseFret="ND"
+			gSlibelledeviseFret="ND"
+		SINON
+			gsSymboleDeviseFret=REQ_RecupeSymboleDevise.Symbole
+			gSlibelledeviseFret=REQ_RecupeSymboleDevise.libelle
+		FIN
+	FIN
+	
+	
+	
+	REQ_RecupeSymboleDevise.ParamIDDevises=gnviddeviseAssurance
+	SI PAS HExécuteRequête(REQ_RecupeSymboleDevise) ALORS
+		Info("Erreur "+HErreurInfo())
+		gsSymboleDeviseAssurance="ND"
+		gSlibelledeviseAss="ND"
+	SINON
+		HLitPremier(REQ_RecupeSymboleDevise)
+		SI HEnDehors(REQ_RecupeSymboleDevise) ALORS
+			gsSymboleDeviseAssurance="ND"
+			gSlibelledeviseAss="ND"
+		SINON
+			gsSymboleDeviseAssurance=REQ_RecupeSymboleDevise.Symbole
+			gSlibelledeviseAss=REQ_RecupeSymboleDevise.libelle
+		FIN
+	FIN
+	
+	
+	
+	
+	
+	
+	//Debut effe insertion
+	
+	
+	HLitPremier(structur)
+	gimage1=structur.logoSociete
+	
+gbBnouveau1=Faux
+gnNumenr2=1
+TANTQUE gnNumenr2<=10
+	gsScell1="A"+SansEspace(NumériqueVersChaîne(gnNumenr2))
+	
+	SI TBLR_NoteDetail[gsScell1]<>"" ALORS
+		gbBnouveau1=Vrai
+		SORTIR
+	SINON
+		gnNumenr2=gnNumenr2+1
+	FIN
+FIN
+
+SI gbBnouveau1=Vrai ALORS
+	gnNnumfeuille=TableurAjouteFeuille(TBLR_NoteDetail)
+FIN
+	
+	//gnNnumfeuille=TableurAjouteFeuille(TBLR_NoteDetail)
+	//TableurSelectFeuille(TBLR_NoteDetail,"Feuil"+SansEspace(NumériqueVersChaîne(gnNnumfeuille)))
+	TBLR_NoteDetail..FeuilleEnCours=gnNnumfeuille
+	//TableurCharge(TBLR_NoteDetail,"modelenotededetail.xlsx",gnNnumfeuille)
+	//gsChem3="satmlogocarre1.png"
+	//TBLR_NoteDetail["A2"]="Société Africaine de Transit maritime"
+	TableurAjouteImage(TBLR_NoteDetail,gimage1,"A1","A4")
+	
+	SI gsnaturedossier="IMP" ALORS
+		
+		gsSreq5="select idArticles,NumeroArticle,BRUT,net from Articles where idnotesdedetails="+gnvidnotedetail+" and idArticles not in (select idarticles from liquidationsArticles)"
+		SI PAS HExécuteRequêteSQL(gsdJenr120,gsSreq5) ALORS
+			Info("erreur "+HErreurInfo(hErrComplet))
+		SINON
+			gsch1=""
+			HLitPremier(gsdJenr120)
+			TANTQUE PAS HEnDehors(gsdJenr120)
+				gsch1=gsch1+" "+SansEspace(NumériqueVersChaîne(gsdJenr120.NumeroArticle))
+				HLitSuivant(gsdJenr120)
+			FIN
+//			SI SansEspace(gsch1)<>"" ALORS
+//				Info("Désolé, vous ne pouvez pas encore générer un état de sortie"+RC+"Les articles suivants "+gsch1+" n'ont pas encore été liquidés")
+//				RETOUR
+//			FIN
+		FIN
+		
+	FIN
+	
+	colonne est une xlsColonne
+	
+
+	
+	REQ_SommeEltsArticlesDuneNoteDeDetail.ParamIDNotesDeDetails=gnvidnotedetail
+	
+	SI PAS HExécuteRequête(REQ_SommeEltsArticlesDuneNoteDeDetail) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet))
+		RETOUR
+	FIN
+	
+	gmomontantFobEn!devises=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FOB,2)
+	gmomontantFretEn!devises=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FRET,2)
+	gmoMDeviseAssurances=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_ASSURANCES,0)
+	gmoMobtantFOBCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FOBCFA,0)
+	gmoMobtantFretCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_FRETCFA,0)
+	gmmontantAssuranceCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_ASSURANCESCFA,0)
+	gmoMCAFCFATotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_CAF,0)
+	grpoidsbruttotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_BRUT,2)
+	grRpoidsnettotal=Arrondi(REQ_SommeEltsArticlesDuneNoteDeDetail.la_somme_NET,2)
+	
+	req3="update NotesDeDetails set MontantFOBTotalCFA='"+gmoMobtantFOBCFATotal+"',MontantFretTotalCFA='"+gmoMobtantFretCFATotal+"',MontantAssuranceTotalCFA='"+gmmontantAssuranceCFATotal+"',MontantFOBTotalDevise='"+gmomontantFobEn!devises+"',MontantFretTotalDevise='"+gmomontantFretEn!devises+"',MontantAssurancesTotalDevise='"+gmoMDeviseAssurances+"',MontantCAFTotalCFA='"+gmoMCAFCFATotal   +"',PoidsBrutTotal='"+grpoidsbruttotal+"',PoidsnETTotal='"+ grRpoidsnettotal+"' where IDNotesDeDetails='"+gnvidnotedetail+"'"
+	SI PAS HExécuteRequêteSQL(gsdMod3,req3) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet))
+		RETOUR
+	FIN
+	
+	REQ_NoteDeDetailDossier.ParamIDNotesDeDetails=gnvidnotedetail
+	SI PAS HExécuteRequête(REQ_NoteDeDetailDossier) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet)+RC+gsmesserreur)
+		RETOUR
+	FIN
+	
+	
+	SI SansEspace(gsSmodeexpedition)<>"" ALORS
+		SI gsSmodeexpedition="MA" ALORS
+			gsSlignemanifeste="Maritime"
+		SINON
+			SI gsSmodeexpedition="AE" ALORS
+				gsSlignemanifeste="Aérien"
+			SINON
+				gsSlignemanifeste="Terrestre"
+				
+			FIN
+		FIN
+	SINON
+		gsSlignemanifeste="Non Disponible"
+	FIN
+	//TBLR_NoteDetail.fu
+	
+	TBLR_NoteDetail["C1"]="Dossier n° "+gsCODEDOSSIERCOURTND+" client :"+gsnomclientND+" traité par "+gSdeclarant
+	TableurSelectPlus(TBLR_NoteDetail,"B"+SansEspace(NumériqueVersChaîne(1)),"M"+SansEspace(NumériqueVersChaîne(1)))
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) 
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(246,239, 238))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,15)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	//,"14.2fs"
+	TBLR_NoteDetail["B2"]="FOB en devises "
+	TBLR_NoteDetail["C2"]=SansEspace(NumériqueVersChaîne(gmomontantFobEn!devises,"14.2fS"))+" "+SansEspace(gsSymboleDeviseFob)
+	TableurSelectPlus(TBLR_NoteDetail,"B2","E2")
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	SI PAS ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) ALORS
+		
+	FIN
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	//TBLR_NoteDetail["C2"]=gsSymboleDeviseFob
+	//"14.2fs"
+	TBLR_NoteDetail["F2"]="Fret en devises: "
+	TBLR_NoteDetail["G2"]=SansEspace(NumériqueVersChaîne(gmomontantFretEn!devises,"14.2fS"))+" "+SansEspace(gsSymboleDeviseFret)
+	TableurSelectPlus(TBLR_NoteDetail,"F2","H2")
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	SI PAS ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) ALORS
+		
+	FIN
+	
+	
+	
+REQ_OrdreDeTransitDuDossier.ParamIDDossiers=gnViddossier
+SI PAS HExécuteRequête(REQ_OrdreDeTransitDuDossier) ALORS
+	Info("Erreur "+HErreurInfo(hErrComplet))
+SINON
+	HLitPremier(REQ_OrdreDeTransitDuDossier)
+	SI PAS HEnDehors(REQ_OrdreDeTransitDuDossier) ALORS
+		gSnbrecolis=	SansEspace(REQ_OrdreDeTransitDuDossier.Nbredecolis)
+		gSpoidsnet=SansEspace(NumériqueVersChaîne(REQ_OrdreDeTransitDuDossier.PoidsNet,"14.2fS"))
+		gSvaleurmarchandisegsvaleurmarchandise=REQ_OrdreDeTransitDuDossier.ValeurMarchandise
+		gsbatureproduit= REQ_OrdreDeTransitDuDossier.NatureProduits
+	
+	FIN
+FIN
+
+
+
+	
+	
+	
+	
+	
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	TBLR_NoteDetail["I2"]="Nbre de colis : "
+	TBLR_NoteDetail["J2"]=NumériqueVersChaîne(gNnbrecoliscalcule)
+	TBLR_NoteDetail["L2"]="Assurances en CFA : "
+	TBLR_NoteDetail["M2"]=SansEspace(NumériqueVersChaîne(gmmontantAssuranceCFATotal,"14.2fS"))+" "+SansEspace(gsSymboleDeviseAssurance)
+	TableurSelectPlus(TBLR_NoteDetail,"L2","M2")
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	SI PAS ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) ALORS
+		
+	FIN 
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	//info("Devise FOB "+gSlibelledeviseFOB+" symbole "+gsSymboleDeviseFob)
+
+SI gsDPI="" ALORS
+	gsDPI="ND"
+FIN
+
+SI gSorbusnouv="" ALORS
+	gSorbusnouv="ND"
+FIN
+//gsrepertoire=SansEspace(TABLE_NotesDeDetails.COL_REPERTOIRE)
+TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+TBLR_NoteDetail["B3"]="Provenance : "
+TBLR_NoteDetail["C3"]=SansEspace(gSprovenancenouvuv)
+TBLR_NoteDetail["L3"]="NINEA : "
+TBLR_NoteDetail["M3"]=SansEspace(gSnineanouv)
+TBLR_NoteDetail["B4"]="Type manifeste : "
+TBLR_NoteDetail["C4"]=SansEspace(gsSlignemanifeste)
+	TBLR_NoteDetail["F4"]="Répertoire : "
+	TBLR_NoteDetail["G4"]=gsrepertoire
+TBLR_NoteDetail["L4"]="N° BL : "
+TBLR_NoteDetail["M4"]=SansEspace(gssnumerobl)
+//TBLR_NoteDetail["D3"]="N° ORBUS : "
+//TBLR_NoteDetail["E3"]=SansEspace(gSorbusnouv)
+TBLR_NoteDetail["F3"]="Nbre de colis  :  "
+TBLR_NoteDetail["G3"]=NumériqueVersChaîne(gNnbrecoliscalcule)
+TBLR_NoteDetail["I2"]="Valeur march :"
+TBLR_NoteDetail["J2"]=SansEspace(gSvaleurmarchandisegsvaleurmarchandise)
+TBLR_NoteDetail["I3"]="Poids brut : "
+TBLR_NoteDetail["J3"]=+SansEspace(NumériqueVersChaîne(grpoidsbruttotal,"14.2fS"))
+TBLR_NoteDetail["I4"]="Poids net :"
+TBLR_NoteDetail["J4"]=SansEspace(NumériqueVersChaîne(grRpoidsnettotal,"14.2fS"))
+	
+	
+	
+		
+	TableurSelectPlus(TBLR_NoteDetail,"B"+SansEspace(NumériqueVersChaîne(2)),"M"+SansEspace(NumériqueVersChaîne(4)))
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(248,248, 247))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,10)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	
+	
+	TBLR_NoteDetail["A7"]="Position tarifaire"
+	TBLR_NoteDetail["A8"]="Régime"
+	TBLR_NoteDetail["A9"]="DPI"
+	TBLR_NoteDetail["A10"]="Titre Exo"
+	TBLR_NoteDetail["A11"]="Origine"
+	TBLR_NoteDetail["A12"]="Valeur FOB en devises"
+	TBLR_NoteDetail["A13"]="Devise FOB"
+	TBLR_NoteDetail["A14"]="Valeur FOB en CFA"
+	TBLR_NoteDetail["A15"]="Valeur Fret en devises"
+	TBLR_NoteDetail["A16"]="Devise fret"
+	
+	TBLR_NoteDetail["A17"]="Valeur Fret en CFA"
+	TBLR_NoteDetail["A18"]="Assurances en CFA"
+	TBLR_NoteDetail["A19"]="Commission en CFA"
+	TBLR_NoteDetail["A20"]="Valeur CAF en CFA"
+	TBLR_NoteDetail["A21"]="Nbre colis"
+	TBLR_NoteDetail["A22"]="Poids brut"
+	TBLR_NoteDetail["A23"]="Poids net"
+	TBLR_NoteDetail["A24"]="Quantité complémentaire"
+	TBLR_NoteDetail["A25"]="Quantité mercuriale"
+	
+	
+	//info("nbre articles "+hnbenr(gsdJenr1))
+	TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(7)),"A"+SansEspace(NumériqueVersChaîne(26)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,10)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	gnnumligne1=6
+	gnnumerocol2=1
+	TANTQUE gnnumerocol2<=11	
+		SELON gnnumerocol2
+			CAS 1 : gsSlettrecell1="B"
+				
+			CAS 2 : gsSlettrecell1="C"
+			CAS 3 : gsSlettrecell1="D"
+			CAS 4 : gsSlettrecell1="E"
+			CAS 5 : gsSlettrecell1="F"
+			CAS 6 : gsSlettrecell1="G"
+			CAS 7 : gsSlettrecell1="H"
+			CAS 8 : gsSlettrecell1="I"
+			CAS 9 : gsSlettrecell1="J"
+			CAS 10 : gsSlettrecell1="K"
+			CAS 11 : gsSlettrecell1="L"	
+				
+		FIN
+		gsScell1=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne1))
+		ch2="Article "+SansEspace(NumériqueVersChaîne(gnnumerocol2))
+		//info("Cellule "+gsScell1+" ch2 "+ch2)
+		TBLR_NoteDetail[gsScell1]=ch2
+		gnnumerocol2=gnnumerocol2+1
+	FIN
+	//TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"B"+SansEspace(NumériqueVersChaîne(gnnumligne1)),"M"+SansEspace(NumériqueVersChaîne(gnnumligne1)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,10)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	HLitPremier(gsdJenr1)
+	TANTQUE PAS HEnDehors(gsdJenr1)
+		gnnumeroArticle=gsdJenr1.NumeroArticle
+		gnnumligne2=7
+		
+		SELON gnnumeroArticle
+			CAS 1 : gsSlettrecell1="B"
+				
+			CAS 2 : gsSlettrecell1="C"
+			CAS 3 : gsSlettrecell1="D"
+			CAS 4 : gsSlettrecell1="E"
+			CAS 5 : gsSlettrecell1="F"
+			CAS 6 : gsSlettrecell1="G"
+			CAS 7 : gsSlettrecell1="H"
+			CAS 8 : gsSlettrecell1="I"
+			CAS 9 : gsSlettrecell1="J"
+			CAS 10 : gsSlettrecell1="K"
+			CAS 11 : gsSlettrecell1="L"
+				
+				
+				
+		FIN
+		
+		
+		
+		req2="select * from articles where IDNotesDeDetails='"+gnvidnotedetail+"'and NumeroArticle='"+gnnumeroArticle+"'"
+		SI PAS HExécuteRequêteSQL(gsdJenr2,req2) ALORS
+			Info("Erreur "+HErreurInfo(hErrComplet))
+			RETOUR
+		FIN
+		HLitPremier(gsdJenr2)
+		gnvidarticles=gsdJenr2.IDArticles
+		gsnts=gsdJenr2.nts
+		gScoderegime=gsdJenr2.coderegimedeclaration
+		gsDPI=gsdJenr2.dpi
+		gstitreexo=gsdJenr2.titreexo
+		gsorigine=gsdJenr2.origine
+		gmomontantFobEn!devises=Arrondi(gsdJenr2.FOB,2)
+		gmomontantFretEn!devises=Arrondi(gsdJenr2.Fret,2)
+		gmomontantAssurancesEn!devises=Arrondi(gsdJenr2.Assurances,2)
+		gmoMAssCFA=Arrondi(gsdJenr2.ASSURANCESCFA,0)
+		gmoMFobCFA=Arrondi(gsdJenr2.FOBCFA,0)
+		gmoMFretCFA=Arrondi(gsdJenr2.FRETCFA,0)
+		gMomontantmontantcommission=Arrondi(gsdJenr2.commissionfournisseur,0)
+		gmoMCAFCFA1=Arrondi(gsdJenr2.CAF,0)
+		gnnbrecolisarticle=gsdJenr2.nbcolis
+		grrpoidsnet=Arrondi(gsdJenr2.net,2)
+		grrpoidsbrut=Arrondi(gsdJenr2.brut,2)
+		grqc=gsdJenr2.qc
+		grqm=gsdJenr2.qm
+		gnNviddeviseFob=gsdJenr2.IDDEVISEFOB
+		gnNvideviseFret=gsdJenr2.IDDEVISEFRET
+		gnNviddeviseAssurances=gsdJenr2.IDDEVISEASS
+		
+		REQ_LibelleDevise.ParamIDDevises=gnNviddeviseFob
+		SI PAS HExécuteRequête(REQ_LibelleDevise) ALORS
+			gSlibelledeviseFOB=""
+			Info("Erreur "+HErreurInfo(hErrComplet))
+			RETOUR
+		FIN
+		HLitPremier(REQ_LibelleDevise)
+		SI PAS HEnDehors(REQ_LibelleDevise) ALORS
+			gSlibelledeviseFOB=REQ_LibelleDevise.libelle
+		SINON
+		FIN
+		
+		
+		
+		
+		REQ_LibelleDevise.ParamIDDevises=gnNvideviseFret
+		SI PAS HExécuteRequête(REQ_LibelleDevise) ALORS
+			Info("Erreur "+HErreurInfo(hErrComplet))
+			RETOUR
+		FIN
+		HLitPremier(REQ_LibelleDevise)
+		SI PAS HEnDehors(REQ_LibelleDevise) ALORS
+			gSlibelledeviseFret=REQ_LibelleDevise.libelle
+		SINON
+			gSlibelledeviseFret=""
+		FIN
+		
+		//INFO("net="+grrpoidsnet+" qc="+grqc+" qm="+grqm+" libdevfret="+gSlibelledeviseFret)
+		REQ_LibelleDevise.ParamIDDevises=gnNviddeviseAssurances
+		SI PAS HExécuteRequête(REQ_LibelleDevise) ALORS
+			Info("Erreur "+HErreurInfo(hErrComplet))
+			RETOUR
+		FIN
+		HLitPremier(REQ_LibelleDevise)
+		SI PAS HEnDehors(REQ_LibelleDevise) ALORS
+			gSlibelledeviseAss=REQ_LibelleDevise.libelle
+		SINON
+			gSlibelledeviseAss=""
+		FIN
+		
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gsnts
+		gnnumligne2=gnnumligne2+1
+		
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gScoderegime
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gsDPI
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gstitreexo
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		
+		TBLR_NoteDetail[gsScell4]=gsorigine
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=NumériqueVersChaîne(gmomontantFobEn!devises,"14.2fS")
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gSlibelledeviseFOB
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=NumériqueVersChaîne(gmoMFobCFA,"14.0fS")
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=NumériqueVersChaîne(gmomontantFretEn!devises,"14.2fS")
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=gSlibelledeviseFret
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(gmoMFretCFA,"14.0fS"))
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(gmoMAssCFA,"14.0fS"))
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(gMomontantmontantcommission,"14.0fS"))
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(gmoMCAFCFA1,"14.0fS"))
+		
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(gnnbrecolisarticle))
+		
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(grrpoidsbrut,"14,2fS"))
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(grrpoidsnet,"14,2fS"))
+		gnnumligne2=gnnumligne2+1
+		
+		//gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(grqc,"14,2fS"))
+		//gnnumligne2=gnnumligne2+1
+		
+		gnnumligne2=gnnumligne2+1
+		gsScell4=gsSlettrecell1+SansEspace(NumériqueVersChaîne(gnnumligne2))
+		TBLR_NoteDetail[gsScell4]=SansEspace(NumériqueVersChaîne(grqm,"14,2fS"))
+		//gnnumligne2=gnnumligne2+1
+		
+		
+		
+		
+		
+		
+	req3="select tectaxestaux.codetaxe,tectaxestaux.libelletaxe from tectaxestaux join liquidationsArticles on tectaxestaux.IDtaxes=LiquidationsArticles.IDTAXES where liquidationsArticles.idarticles in (select idarticles from articles where idnotesdedetails="+gnvidnotedetail+") group by codetaxe, libelletaxe"
+	
+	
+	SI PAS HExécuteRequêteSQL(gsdJenr3,req3) ALORS
+		Info("Erreur "+HErreurInfo())
+		RETOUR
+	FIN
+		
+	
+		gnNnumligne3=27
+		gmmontantaolatricle=0
+		HLitPremier(gsdJenr3)
+		TANTQUE PAS HEnDehors(gsdJenr3)
+			gscodetaxe=gsdJenr3.codetaxe	
+			gslibelleTaxe=gsdJenr3.libelletaxe
+			REQ_LiquidationArticleVue.ParamIDArticles=gnvidarticles
+			REQ_LiquidationArticleVue.ParamCodeTaxe=gscodetaxe
+			SI PAS HExécuteRequête(REQ_LiquidationArticleVue) ALORS
+				Info("Erreur "+HErreurInfo())
+				RETOUR
+			FIN
+			
+			HLitPremier(REQ_LiquidationArticleVue)
+			SI PAS HEnDehors(REQ_LiquidationArticleVue) ALORS
+		
+				gnvidtaux=REQ_LiquidationArticleVue.IDTECTAXESTAUX
+				gMomontantTaxesArticle=Arrondi(REQ_LiquidationArticleVue.MontantLiquide,2)
+				gslibelleTaxe=REQ_LiquidationArticleVue.LibelleTaxe
+				gscodetaxe=REQ_LiquidationArticleVue.CodeTaxe
+				gsLibelleTaxeComplet=REQ_LiquidationArticleVue.LibelleTaxeComplet
+				gmmontantaolatricle=gmmontantaolatricle+gMomontantTaxesArticle
+				
+				
+			SINON
+				gMomontantTaxesArticle=0
+				
+			FIN
+			
+			SI gnnumeroArticle=1 ALORS
+				gsScell2="A"+SansEspace(NumériqueVersChaîne(gnNnumligne3))
+				TBLR_NoteDetail[gsScell2]=gscodetaxe+"-"+gslibelleTaxe
+			FIN
+			gsScell1=SansEspace(gsSlettrecell1)+SansEspace(NumériqueVersChaîne(gnNnumligne3))
+			TBLR_NoteDetail[gsScell1]=SansEspace(NumériqueVersChaîne(gMomontantTaxesArticle,"14.0fS"))
+			gnNnumligne3=gnNnumligne3+1
+			
+			
+			
+			
+			HLitSuivant(gsdJenr3)
+			
+		FIN
+		
+		gnNnumligne3=gnNnumligne3+1
+		gsScell1=SansEspace(gsSlettrecell1)+SansEspace(NumériqueVersChaîne(gnNnumligne3))
+		TBLR_NoteDetail[gsScell1]=SansEspace(NumériqueVersChaîne(gmmontantaolatricle,"14.0fS"))
+		gmmontantaolatricle=0
+		
+		
+		
+		HLitSuivant(gsdJenr1)
+	FIN
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	TBLR_NoteDetail["G26"]="Liquidation"
+	
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	TBLR_NoteDetail["M26"]="Cumul"
+	
+	TableurSelectPlus(TBLR_NoteDetail,"M26")
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	
+	
+	
+	
+	gnNum3=27
+	gMomontant2=0
+	gmoMontanttotalliquide=0
+	gnNcodeascii=66
+	TANTQUE gnNum3<gnNnumligne3-1
+		TANTQUE gnNcodeascii<=76
+			gsScell5=Caract(gnNcodeascii)+SansEspace(NumériqueVersChaîne(gnNum3))
+			gMomontant2=gMomontant2+Val(ChaîneSupprime(TBLR_NoteDetail[gsScell5]," "))
+			gnNcodeascii=gnNcodeascii+1
+		FIN
+		gsScell6="M"+SansEspace(NumériqueVersChaîne(gnNum3))
+		//TBLR_NoteDetail[gsScell6]=xlsTypeChaîne
+		//gsch1=
+		//info(TypeVar(gsch1))
+		TBLR_NoteDetail[gsScell6]=SansEspace(NumériqueVersChaîne(gMomontant2,"14.0fS"))
+		//TBLR_NoteDetail[gsScell6]=NumériqueVersChaîne(TBLR_NoteDetail[gsScell6])
+		//TableurTypeEtMasqueSélection(TBLR_NoteDetail,typSaisieMonétaire,"  ")
+		//NumériqueVersChaîne(TBLR_NoteDetail[gsScell6],"L"
+		gmoMontanttotalliquide=gmoMontanttotalliquide+gMomontant2
+		gMomontant2=0
+		gnNcodeascii=66
+		gnNum3=gnNum3+1
+	FIN
+	gsScell6="A"+SansEspace(NumériqueVersChaîne(gnNnumligne3))
+	TBLR_NoteDetail[gsScell6]="Total"
+	//TableurSelectPlus(TBLR_NoteDetail,"M21")
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	gsScell6="M"+SansEspace(NumériqueVersChaîne(gnNnumligne3))
+	gsch1=NumériqueVersChaîne(gmoMontanttotalliquide,"14.0fS")
+	TBLR_NoteDetail[gsScell6]=SansEspace(NumériqueVersChaîne(gmoMontanttotalliquide,"14.0fS"))
+	
+	req2="update notesdedetails set montantliquidation='"+gmoMontanttotalliquide+"' where idnotesdedetails='"+gnvidnotedetail+"'"
+	SI PAS HExécuteRequêteSQL(gsdMod2,req2) ALORS
+		Info("Erreur "+HErreurInfo(hErrComplet))
+	FIN
+	
+	gnNum2=27
+	//colonne ext xlsc
+	xCadre est un Cadre
+	xCadre.Epaisseur = 1
+	xCadre.Couleur = Noir
+	
+	TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(6)),"M"+SansEspace(NumériqueVersChaîne(25)))
+	//TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(246,239, 238))
+	
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	TableurCadreSélection(TBLR_NoteDetail, xCadre, Vrai)
+	
+	TableurSelectPlus(TBLR_NoteDetail,"A3","M"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"B"+SansEspace(NumériqueVersChaîne(gnNum2)),"M"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	//TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(246,239, 238))
+	
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurCadreSélection(TBLR_NoteDetail, xCadre, Vrai)
+	TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(gnNum2)),"A"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	
+	TableurSelectPlus(TBLR_NoteDetail,"B1","M1")
+	//TableurStyleSélection(TBLR_NoteDetail,)
+	//colonne..Largeur=200
+	
+	TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(gnNnumligne3)),"M"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	
+	
+	TableurSelectPlus(TBLR_NoteDetail,"M"+SansEspace(NumériqueVersChaîne(gnNum2)),"M"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	
+	TableurSelectPlus(TBLR_NoteDetail,"A26","L26")
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	SI PAS ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) ALORS
+		
+	FIN
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	//Fin effec inser
+	
+	
+	
+	
+	
+	TableurSelectPlus(TBLR_NoteDetail,"C1")
+	//+SansEspace(NumériqueVersChaîne(1)),"M"+SansEspace(NumériqueVersChaîne(1)))
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	//ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) 
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,13)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	
+	
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	//TBLR_NoteDetail["G26"]="Liquidation"
+	TableurSelectPlus(TBLR_NoteDetail,"A26","L26")
+	//TableurStyleSélection(TBLR_NoteDetail,faaSélection)
+	//SI PAS ExécuteFAA(TBLR_NoteDetail,faaTableurFusion) ALORS
+	//	
+	//FIN
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	TBLR_NoteDetail["M26"]="Cumul"
+	
+	TableurSelectPlus(TBLR_NoteDetail,"M26")
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(1)),"A"+SansEspace(NumériqueVersChaîne(20)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"A"+SansEspace(NumériqueVersChaîne(26)),"A"+SansEspace(NumériqueVersChaîne(gnNnumligne3-1)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	
+	
+	TableurSelectPlus(TBLR_NoteDetail,"B"+SansEspace(NumériqueVersChaîne(2)),"M"+SansEspace(NumériqueVersChaîne(6)))
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,RGB(242,242,244))
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	TableurStyleSélection(TBLR_NoteDetail,tblrGras,Vrai)
+	TBLR_NoteDetail["A"]..Largeur=180
+	TBLR_NoteDetail["B"]..Largeur=160
+	TBLR_NoteDetail["C"]..Largeur=150
+	TBLR_NoteDetail["D"]..Largeur=140
+	TBLR_NoteDetail["E"]..Largeur=140
+	TBLR_NoteDetail["F"]..Largeur=140
+	TBLR_NoteDetail["G"]..Largeur=140
+	TBLR_NoteDetail["H"]..Largeur=140
+	TBLR_NoteDetail["I"]..Largeur=140
+	TBLR_NoteDetail["J"]..Largeur=140
+	TBLR_NoteDetail["K"]..Largeur=140
+	TBLR_NoteDetail["L"]..Largeur=140
+	TBLR_NoteDetail["M"]..Largeur=170
+	
+	
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"B21","M23")
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurFond,Blanc)
+	TableurStyleSélection(TBLR_NoteDetail,tblrTaillePolice,11)
+	TableurStyleSélection(TBLR_NoteDetail,tblrCouleurTexte,Noir)
+	//TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chCentre)
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	TableurSelectPlus(TBLR_NoteDetail,"A26")
+	
+	TableurStyleSélection(TBLR_NoteDetail,tblrAlignementH,chGauche)
+	
+	TableurSelectMoins(TBLR_NoteDetail)
+	
+	gbGBNOUVEAU=Faux
+	
+	
+	//TableurSelectPlus(TBLR_NoteDetail,"A1","M"+SansEspace(NumériqueVersChaîne(gnNnumligne3)))
+	//TBLR_NoteDetail.SelectFeuille(TBLR_NoteDetail..NomFeuille)
+	
+//	ch1=TableurTypeEtMasqueSélection(TBLR_NoteDetail)
+//	typSaisieMonétaire
+//	,typSaisieTexte
+	
+	
+	
+//	sRes est une chaîne
+//	nType est un entier
+//	sMasque est une chaîne
+//	sRes = TableurTypeEtMasqueSélection(TBLR_NoteDetail)
+//	nType = Val(ExtraitChaîne(sRes, 1, TAB))
+//	sMasque = Val(ExtraitChaîne(sRes, 2, TAB))
+	//TableurTypeEtMasqueSélection(TBLR_NoteDetail,typSaisieMonétaire, "999 999 999 999,99")
+	
+//	TableurTypeEtMasqueSélection(TBLR_NoteDetail["A1","M"+SansEspace(NumériqueVersChaîne(gnNnumligne3))],)
+	//TableurSauve(TBLR_NoteDetail,ComplèteRep(SysRep(srMesDocuments))+"testND.xlsx",tblrEcrasementAutorisé)
+//	texte((TBLR_NoteDetail["A1","M"+SansEspace(NumériqueVersChaîne(gnNnumligne3))])
+	ToastAffiche("Fin du traitement.",toastCourt,cvMilieu,chCentre,VertFoncé)
+//FIN
+HDésactiveFiltre(CLIENTS)
+HDésactiveFiltre(Dossiers)
+HDésactiveFiltre(NotesDeDetails)
+FIN
+gbBboutongenerersortie=Faux
+TABLE_NotesDeDetails..Etat=Actif
+BTN_Valider_la_note_de_détail..Visible=Vrai
+BTN_Valider_la_note_de_détail..Etat=Actif

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="Export etapes dossier.xsl"?>
+<WINDEV_TABLE>
+  <TABLE_CONTENU>
+    <N__Enr.>1</N__Enr.>
+    <IDEtapesDossiers>1</IDEtapesDossiers>
+    <libelleEtapesDossiers>Ouvert</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>2</N__Enr.>
+    <IDEtapesDossiers>2</IDEtapesDossiers>
+    <libelleEtapesDossiers>Déclaré</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>3</N__Enr.>
+    <IDEtapesDossiers>3</IDEtapesDossiers>
+    <libelleEtapesDossiers>Mis en livraison</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>4</N__Enr.>
+    <IDEtapesDossiers>4</IDEtapesDossiers>
+    <libelleEtapesDossiers>Livré</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>5</N__Enr.>
+    <IDEtapesDossiers>5</IDEtapesDossiers>
+    <libelleEtapesDossiers>Facturé</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>6</N__Enr.>
+    <IDEtapesDossiers>6</IDEtapesDossiers>
+    <libelleEtapesDossiers>Partiellement Payé</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>7</N__Enr.>
+    <IDEtapesDossiers>7</IDEtapesDossiers>
+    <libelleEtapesDossiers>Clôturé</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>8</N__Enr.>
+    <IDEtapesDossiers>8</IDEtapesDossiers>
+    <libelleEtapesDossiers>Indétermine</libelleEtapesDossiers>
+    <Observations/>
+  </TABLE_CONTENU>
+</WINDEV_TABLE>

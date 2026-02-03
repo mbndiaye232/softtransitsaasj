@@ -1,0 +1,7 @@
+BillOfLading2022
+
+En plus des clients, des dossiers et des notes de détails, on a sur le formulaire la liste des produits, la liste des régimes de déclarations,
+ une zone de calcul qui permet d'entrer le montant FOB global ensuite dans le grand tableau, on crée les articles de la note de détail. 
+ Pour chaque article, on met le position tarifire (NTS) qui est récupérée utoatiquement à partir du produit sélectionné, 
+ le code du régime aui est automatiquement récupéré à artir du régime sélectionné, on saisit le numéro de la DPI (Déclaration préalable d'importation)
+ qui n'est pas obligatoire, le titre EXO s'il y a exonération, le pays d'origine

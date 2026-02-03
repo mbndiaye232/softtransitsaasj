@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="Export taxes.xsl"?>
+<WINDEV_TABLE>
+  <TABLE_CONTENU>
+    <N__Enr.>1</N__Enr.>
+    <IDTaxes>1</IDTaxes>
+    <LibelleTaxe>DD</LibelleTaxe>
+    <CodeTaxe>01</CodeTaxe>
+    <LibelleTaxeComplet>DROIT DE DOUANE</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>2</N__Enr.>
+    <IDTaxes>3</IDTaxes>
+    <LibelleTaxe>TVA </LibelleTaxe>
+    <CodeTaxe>05</CodeTaxe>
+    <LibelleTaxeComplet>TAXE SUR LA VALEUR AJOUTEE</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>3</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>3</N__Enr.>
+    <IDTaxes>4</IDTaxes>
+    <LibelleTaxe>TT</LibelleTaxe>
+    <CodeTaxe>07</CodeTaxe>
+    <LibelleTaxeComplet>TAXE SUR LES TISSUS</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>0</Niveau>
+    <Base/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>4</N__Enr.>
+    <IDTaxes>5</IDTaxes>
+    <LibelleTaxe>SURTAXE</LibelleTaxe>
+    <CodeTaxe>51</CodeTaxe>
+    <LibelleTaxeComplet>SURTAXE</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>5</N__Enr.>
+    <IDTaxes>6</IDTaxes>
+    <LibelleTaxe>TI</LibelleTaxe>
+    <CodeTaxe>53</CodeTaxe>
+    <LibelleTaxeComplet>TAXE INTERIEURE</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>2</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>6</N__Enr.>
+    <IDTaxes>7</IDTaxes>
+    <LibelleTaxe>FP</LibelleTaxe>
+    <CodeTaxe>54</CodeTaxe>
+    <LibelleTaxeComplet>PRELEVEMENT FONDS PASTORAL</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>QC</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>7</N__Enr.>
+    <IDTaxes>8</IDTaxes>
+    <LibelleTaxe>TCI</LibelleTaxe>
+    <CodeTaxe>34</CodeTaxe>
+    <LibelleTaxeComplet>TAXE CONJONCT.IMPORT</LibelleTaxeComplet>
+    <IdAgent>9</IdAgent>
+    <Niveau>2</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>8</N__Enr.>
+    <IDTaxes>9</IDTaxes>
+    <LibelleTaxe>BIC</LibelleTaxe>
+    <CodeTaxe>46</CodeTaxe>
+    <LibelleTaxeComplet>TAXE ACOMPTE BIC</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>9</N__Enr.>
+    <IDTaxes>10</IDTaxes>
+    <LibelleTaxe>TICOSMETIQUE</LibelleTaxe>
+    <CodeTaxe>50</CodeTaxe>
+    <LibelleTaxeComplet>TAXE INTERIEURE COSMETIQUES</LibelleTaxeComplet>
+    <IdAgent>9</IdAgent>
+    <Niveau>2</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>10</N__Enr.>
+    <IDTaxes>11</IDTaxes>
+    <LibelleTaxe>TIVEHICULES</LibelleTaxe>
+    <CodeTaxe>59</CodeTaxe>
+    <LibelleTaxeComplet>TAXE INT. VEHICULE SUP 13 CH</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>11</N__Enr.>
+    <IDTaxes>12</IDTaxes>
+    <LibelleTaxe>RS</LibelleTaxe>
+    <CodeTaxe>03</CodeTaxe>
+    <LibelleTaxeComplet>REDEVANCE STATISTIQUE</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>12</N__Enr.>
+    <IDTaxes>13</IDTaxes>
+    <LibelleTaxe>COSEC</LibelleTaxe>
+    <CodeTaxe>10</CodeTaxe>
+    <LibelleTaxeComplet>PRELEVEMENT COSEC</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>13</N__Enr.>
+    <IDTaxes>14</IDTaxes>
+    <LibelleTaxe>UEMOA </LibelleTaxe>
+    <CodeTaxe>30</CodeTaxe>
+    <LibelleTaxeComplet>PRELEV.COMMUNAUTAIRE.SOLID.</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>14</N__Enr.>
+    <IDTaxes>15</IDTaxes>
+    <LibelleTaxe>CEDEAO</LibelleTaxe>
+    <CodeTaxe>31</CodeTaxe>
+    <LibelleTaxeComplet>PRELEVEMT COMUNAUTAIRE CEDEAO</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>15</N__Enr.>
+    <IDTaxes>16</IDTaxes>
+    <LibelleTaxe>PROMAD</LibelleTaxe>
+    <CodeTaxe>63</CodeTaxe>
+    <LibelleTaxeComplet>PRELEVEMENT PROMAD</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>1</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>16</N__Enr.>
+    <IDTaxes>17</IDTaxes>
+    <LibelleTaxe>ENRVEHP13CH</LibelleTaxe>
+    <CodeTaxe>43</CodeTaxe>
+    <LibelleTaxeComplet>TAXE ENREGISTREMENT VEHICULES DE PLUS DE 13 CH</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>0</Niveau>
+    <Base/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>17</N__Enr.>
+    <IDTaxes>18</IDTaxes>
+    <LibelleTaxe>ENRVEHM13CH</LibelleTaxe>
+    <CodeTaxe>44</CodeTaxe>
+    <LibelleTaxeComplet>TAXE ENREGISTREMENT VEHICULES DE moins 13 CH</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>0</Niveau>
+    <Base/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>18</N__Enr.>
+    <IDTaxes>19</IDTaxes>
+    <LibelleTaxe>RETARD</LibelleTaxe>
+    <CodeTaxe>09</CodeTaxe>
+    <LibelleTaxeComplet>INTERETS DE RETARD</LibelleTaxeComplet>
+    <IdAgent>0</IdAgent>
+    <Niveau>0</Niveau>
+    <Base/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>19</N__Enr.>
+    <IDTaxes>20</IDTaxes>
+    <LibelleTaxe>TAXE ADD</LibelleTaxe>
+    <CodeTaxe>45</CodeTaxe>
+    <LibelleTaxeComplet>TAXE ADDITIONNELLE</LibelleTaxeComplet>
+    <IdAgent>9</IdAgent>
+    <Niveau>2</Niveau>
+    <Base>QM</Base>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>20</N__Enr.>
+    <IDTaxes>21</IDTaxes>
+    <LibelleTaxe>Droits et taxes (déclaration jointe)</LibelleTaxe>
+    <CodeTaxe>99</CodeTaxe>
+    <LibelleTaxeComplet>Droits et taxes (déclaration jointe)</LibelleTaxeComplet>
+    <IdAgent>1</IdAgent>
+    <Niveau>0</Niveau>
+    <Base/>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>21</N__Enr.>
+    <IDTaxes>22</IDTaxes>
+    <LibelleTaxe>TEP</LibelleTaxe>
+    <CodeTaxe>61</CodeTaxe>
+    <LibelleTaxeComplet>TAXES SUR LES EMBALLAGES EN PLASTIQUE</LibelleTaxeComplet>
+    <IdAgent>9</IdAgent>
+    <Niveau>0</Niveau>
+    <Base>V</Base>
+  </TABLE_CONTENU>
+</WINDEV_TABLE>

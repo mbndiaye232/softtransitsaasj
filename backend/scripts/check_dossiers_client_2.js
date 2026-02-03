@@ -1,0 +1,1 @@
+require('dotenv').config({ path: './backend/.env' }); const pool = require('../config/database'); async function check() { try { const [rows] = await pool.query('SELECT * FROM dossiers WHERE IDCLIENTS = 2'); console.log('Dossiers found:', rows.length); console.log(rows); } catch(e) { console.error(e); } process.exit(); }

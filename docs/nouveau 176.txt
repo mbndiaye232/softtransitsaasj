@@ -1,0 +1,107 @@
+Agis en tant que expert en génie civil, promoteur immobilier, spécialiste du marché sénégalais.
+a partir des sources, extrais les éléments les plus pertinents afin de founir à une intelligence artifiacielle le contexte d'un prompt 
+devant lui permettre de répondre à la préoccupation suivante : A partir de ce contenu, générer une présentation avec plans en 2D et rendus en 3D 
+d'un programme de 5000 logements avec implantation de l'usine SOBEMA et reparti ainsi qu'il suit, après réservation des servitudes 
+et équipements collectifs : 15% de l'assiette recevront des immeubles R+4 et 85% seront en villas type FM, Type F2, F3,F4 et 
+des villas Moyen standing et standing . Les plantations d'alignement seront en roniers dans les voies d'emprise atteignant 20m au moins.
+
+
+En tant qu'expert en génie civil, promoteur immobilier et spécialiste du marché sénégalais, voici les éléments contextuels extraits des sources pour construire le prompt destiné à l'intelligence artificielle, en vue de générer la présentation du programme de 5000 logements.
+
+## CONTEXTE DU PROMPT POUR L'INTELLIGENCE ARTIFICIELLE
+
+Le programme immobilier envisagé est un projet d'envergure visant la réalisation de *5 000 logements individuels sur un terrain de 160 hectares* à Thiès, planifié sur une période de six (ou sept) ans. Le projet s'inscrit dans la réponse à la demande croissante de logements au Sénégal, estimée à 500 000 unités de déficit, avec une demande additionnelle annuelle de 15 000 unités.
+
+### 1. Maîtrise d'Ouvrage et Technologie de Construction
+
+*   *Maîtrise d'Ouvrage :* CEGES - Consortium d'Entreprises Générale et de Services.
+*   *Constructeur/Technologie :* Le projet sera réalisé par l'unité industrielle de préfabrication *SOBEMA* (Société de produits en béton manufacturés), issue d'un *transfert de technologie allemande* (Weiler/BT Innovation).
+*   *Objectif Industriel :* L'usine SOBEMA, dont l'investissement total est de 3 milliards de Francs CFA, aura une capacité de production annuelle, à terme, de *2 000 logements* de 60 à 80 m².
+*   *Avantages du Procédé SOBEMA :* Le système de préfabrication en béton armé utilise des dalles et panneaux préfabriqués (dalles à âme creuse précontraintes, murs, poutres, poteaux, cellules). Il assure rapidité d'exécution (une maison en 4 jours en chantier gris, 15 jours avec finitions, ou une moyenne d'une maison par jour sur grands chantiers avec une grue), un standard élevé de qualité, une réduction des délais et des coûts, et un meilleur confort thermique et acoustique.
+
+### 2. Répartition et Types de Logements
+
+Le programme doit suivre une répartition urbanistique spécifique après réservation des servitudes et équipements collectifs : *15% de l'assiette pour les immeubles R+4* et *85% pour les villas*.
+
+Bien que le tableau d'exploitation prévisionnel pour 5 000 logements ne liste que des villas (voir lacunes ci-dessous), l'AI doit utiliser les caractéristiques détaillées des types de villas existants pour la modélisation des 85 % de l'assiette :
+
+| Type de Villa | Nombre d'Unités (selon la répartition 5000 villas) | Nombre de Pièces | Surface Parcelle (m²) | Surface Utile (m²) | Statut |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| *F Modulaire (FM)* | 250 | 2 | 150 | 36,5 | RDC |
+| *F2* | 875 | 2 | 150 | 51,6 | RDC |
+| *F3* | 3 375 | 3 | 150 | 60,7 | RDC |
+| *F4* | 250 | 4 | 200 | 74,4 | RDC |
+| *Moyen Standing (F5)* | 125 | 5 | 300 | 132,8 | R+1 |
+| *Standing (F6)* | 125 | 6 | 300 | 169,8 | R+1 |
+| *TOTAL* | *5 000* | | | *315 563 m² (utile)* | |
+
+### 3. Urbanisme, Voirie et Paysage
+
+*   *Plantations d'Alignement :* Les voies d'emprise atteignant *20 mètres au moins* devront être agrémentées de *rôniers* (palmiers). Des plans connexes indiquent des emprises de voies de 8m, 10m, 15m et 20m.
+*   *Équipements Collectifs/Servitudes :* Des espaces doivent être réservés pour les équipements collectifs (santé, éducation, sports et loisirs). Ces équipements sont également destinés à servir de *chantier-école de formation aux métiers du bâtiment*.
+
+***
+
+## QUESTIONS NÉCESSAIRES POUR COMPLÉTER LE CONTEXTE (Lacunes)
+
+Afin que l'intelligence artificielle puisse générer une présentation cohérente respectant les contraintes spécifiées (5000 logements, 15% R+4 / 85% villas) et intégrant l'usine, des clarifications sont nécessaires car les données sources présentent des contradictions ou des manques :
+
+*1. Clarification de la répartition des 5 000 logements (Contradiction des données)*
+
+Les sources fournissent un compte de 5 000 unités *composées uniquement de villas* (F Modulaire à Standing), mais la demande stipule que 15 % de l'assiette doit être réservée aux immeubles R+4 et 85 % aux villas.
+
+*Question 1 : Comment l'AI doit-elle réconcilier la répartition des 5 000 logements ?*
+
+1.  *Option A (Priorité à la composition numérique de la source) :* Modéliser 5 000 villas (selon le tableau), en concentrant les villas Moyen Standing et Standing (R+1) et en ignorant la contrainte des 15% d'immeubles R+4.
+2.  *Option B (Priorité à la contrainte urbanistique du prompt) :* Modéliser 5 000 logements, où 85% des logements sont des villas et 15% sont des appartements en R+4. Cela nécessite de redéfinir le nombre exact de villas de chaque type et le nombre d'appartements R+4 à intégrer pour atteindre le total de 5 000 unités.
+
+*Veuillez spécifier si l'AI doit suivre strictement la répartition 15% R+4 / 85% Villas (Option B) et comment les 5000 unités se distribuent selon les types F Modulaire à Standing, et en appartements R+4.*
+
+*2. Caractéristiques des Immeubles R+4 (Blocs d'appartements)*
+
+Si l'Option B est retenue, il manque des spécifications précises pour les immeubles R+4.
+
+*Question 2 : Quelles sont les caractéristiques des appartements dans les immeubles R+4 ?*
+(Par exemple : quel type d'appartements (F2, F3, F4) par niveau, quelle surface utile pour chaque type d'appartement dans les R+4, et quel est le ratio d'unités par immeuble R+4 pour permettre la conception des plans 2D/3D ?)
+
+*3. Implantation de l'Usine SOBEMA sur le site de 160 hectares*
+
+Le projet total est de 5000 logements sur 160 ha. L'usine SOBEMA doit être implantée.
+
+*Question 3 : Quelle est la superficie réservée à l'usine SOBEMA (production, stockage, logistique) sur le terrain de 160 hectares, et quelle est sa localisation approximative par rapport aux zones de logements (par exemple : en périphérie, à proximité de la voirie principale) ?*
+
+C'est noté. Puisque vous avez validé ma proposition, je vais approfondir les détails du *Type F4, qui représente souvent le "cœur de gamme" pour les familles, et je vous présenterai ensuite un **comparatif des deux modèles de haut standing*.
+
+Voici l'analyse détaillée :
+
+### 1. Focus : Le Type F4 (Modèle Familial)
+
+Le *Type F4* est conçu pour offrir un équilibre entre espace et gestion du terrain. C'est une villa de plain-pied (Rez-de-chaussée uniquement).
+
+* [cite_start]*Terrain :* Il est bâti sur une parcelle de *200 m²*[cite: 32].
+* [cite_start]*Surface habitable :* La surface utile est de *74,4 m²*[cite: 32].
+* *Composition (4 Pièces) :*
+    * [cite_start]*3 Chambres :* Idéal pour une famille standard (parents + enfants)[cite: 32, 69, 74, 75].
+    * [cite_start]*1 Salon :* Espace de vie central[cite: 79].
+    * [cite_start]*Cuisine :* Espace dédié (mentionné dans les plans généraux)[cite: 36, 55, 70].
+    * [cite_start]*Sanitaires :* Le plan indique la présence de *2 toilettes*, ce qui offre un meilleur confort qu'une salle d'eau unique[cite: 80, 82].
+    * [cite_start]*Extérieur :* Le plan montre une *cour avant* et une *cour arrière*, permettant du stationnement ou un jardin[cite: 89, 91].
+
+### 2. Comparatif : Moyen Standing (MS) vs Standing (S)
+
+Ces deux modèles sont des *villas à étage (Duplex), destinées à une clientèle cherchant plus de confort et d'espace. [cite_start]Elles sont toutes deux bâties sur des terrains de **300 m²*[cite: 32].
+
+Voici les différences clés pour vous aider à choisir :
+
+| Caractéristique | Moyen Standing (MS) | Standing (S) |
+| :--- | :--- | :--- |
+| *Nombre de pièces* | [cite_start]*5 Pièces* [cite: 32] | [cite_start]*6 Pièces* [cite: 32] |
+| *Surface Utile* | [cite_start]*132,8 m²* [cite: 32] | [cite_start]*169,8 m²* [cite: 32] |
+| *Niveaux* | [cite_start]RDC + Étage [cite: 1, 10, 11] | [cite_start]RDC + Étage [cite: 12, 18, 20] |
+| *Avantage principal* | Compromis idéal espace/coût sur grand terrain. | Le plus grand modèle, maximisant la surface habitable. |
+
+*En résumé pour votre projet immobilier :*
+* Si la priorité est la rentabilité locative ou un premier achat familial, le *F4* est le produit standard le plus polyvalent.
+* Si vous visez une clientèle plus aisée, le modèle *Standing (169,8 m²)* offre près de 40 m² de plus que le Moyen Standing pour la même surface de terrain, ce qui valorise mieux le foncier.
+
+Souhaitez-vous que je rédige un email type pour demander les prix actuels de ces modèles au consortium CEGES/SOBEMA ?

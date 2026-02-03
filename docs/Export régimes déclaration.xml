@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="Export régimes déclaration.xsl"?>
+<WINDEV_TABLE>
+  <TABLE_CONTENU>
+    <N__Enr.>5</N__Enr.>
+    <IDRegimeDeclaration>537</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE IMPORTATION DIRECTE PNP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C100</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>4</N__Enr.>
+    <IDRegimeDeclaration>538</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION AVEC RESTITUTION DE DROITS PERçUS PRIME.AB</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C101</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>3</N__Enr.>
+    <IDRegimeDeclaration>539</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION DE PNP (DRAWBACK) SUITE IMP.DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C102</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>2</N__Enr.>
+    <IDRegimeDeclaration>540</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE IMPORT- DIRECTE DONS AIDES A L'ETAT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C111</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>1</N__Enr.>
+    <IDRegimeDeclaration>541</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE IMPORT- DIRECTE DONS A CROIX ROUGE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C112</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>6</N__Enr.>
+    <IDRegimeDeclaration>542</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION DONS AIDES A CARACTERE SOCIAL PNP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C113</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>7</N__Enr.>
+    <IDRegimeDeclaration>543</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION FRANCHISE EXCEPTIONELLE SUITE IMP- DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C121</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>8</N__Enr.>
+    <IDRegimeDeclaration>544</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE IMPORTATION DIRECTE DE PNP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C122</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>9</N__Enr.>
+    <IDRegimeDeclaration>545</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DEMENAGEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C123</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>10</N__Enr.>
+    <IDRegimeDeclaration>546</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EFFETS PERSONNELS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C124</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>11</N__Enr.>
+    <IDRegimeDeclaration>547</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REIMPORTATION.MARCH.SENEGAL.DEFECT.OU NON CONF.à COMMANDE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C125</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>12</N__Enr.>
+    <IDRegimeDeclaration>548</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DECLARATION ENLEVEMENT SPECIAL(D.E.S) YOFF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C126</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>13</N__Enr.>
+    <IDRegimeDeclaration>549</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE TOTALE AU TITRE DU CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C131</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>14</N__Enr.>
+    <IDRegimeDeclaration>550</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>IAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C132</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>15</N__Enr.>
+    <IDRegimeDeclaration>551</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME STABILISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C133</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>16</N__Enr.>
+    <IDRegimeDeclaration>552</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>SUSPENSION PROVISOIRE DES DROITS ET TAXES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C138</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>17</N__Enr.>
+    <IDRegimeDeclaration>553</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A CONSOMMATION DS LE CADRE NOUVEAU CODE INVESTISSEMENT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C139</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>18</N__Enr.>
+    <IDRegimeDeclaration>554</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>PRIVILEGE DIPLOMATIQUE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C140</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>19</N__Enr.>
+    <IDRegimeDeclaration>555</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION SUITE IMPORTATION DIRECTE D COMMUN PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C201</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>20</N__Enr.>
+    <IDRegimeDeclaration>556</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION SUITE IMPORT.DIRECTE DE PP/AVAL SAR</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C202</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>21</N__Enr.>
+    <IDRegimeDeclaration>557</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE IMPORT- DIRECTE DONS CARACT SOCI- PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C210</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>22</N__Enr.>
+    <IDRegimeDeclaration>558</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE IMPORT- DIRECTE DONS AIDES ETAT PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C211</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>23</N__Enr.>
+    <IDRegimeDeclaration>559</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C220</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>24</N__Enr.>
+    <IDRegimeDeclaration>560</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ADMISSION EXCEPTIONNELLE  SUITE IMP- DIRECTE DE PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C221</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>25</N__Enr.>
+    <IDRegimeDeclaration>561</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ADMISSION CONDITIONNELLE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C222</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>26</N__Enr.>
+    <IDRegimeDeclaration>562</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DU CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C230</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>27</N__Enr.>
+    <IDRegimeDeclaration>563</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE TOTALE  AU TITRE DU CODE DES INVESTISSEMENTS PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C231</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>28</N__Enr.>
+    <IDRegimeDeclaration>564</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE PARTIELLE AU TITRE DU CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C232</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>29</N__Enr.>
+    <IDRegimeDeclaration>565</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIMES STABILISES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C233</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>30</N__Enr.>
+    <IDRegimeDeclaration>566</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>SUSPENSION PROVISOIRE DES DROITS &amp; TAXES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C238</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>31</N__Enr.>
+    <IDRegimeDeclaration>567</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION DIRECTE DE PP NOUVEAU CODE INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C239</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>32</N__Enr.>
+    <IDRegimeDeclaration>568</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES PRIVILEGES DIPLOMATIQUES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C240</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>33</N__Enr.>
+    <IDRegimeDeclaration>569</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C290</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>34</N__Enr.>
+    <IDRegimeDeclaration>570</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME COMMUN</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C300</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>35</N__Enr.>
+    <IDRegimeDeclaration>571</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE D'ENTREPOT P.N.P</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C301</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>36</N__Enr.>
+    <IDRegimeDeclaration>572</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE D'ENTREPOT APRES A.T.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C302</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>37</N__Enr.>
+    <IDRegimeDeclaration>573</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE ENTREPOT INDUSTRIEL DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C303</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>38</N__Enr.>
+    <IDRegimeDeclaration>574</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMAT.SUITE ENTREPOT INDUST.REGLEMNT 004/2000 UEMOA</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C304</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>39</N__Enr.>
+    <IDRegimeDeclaration>575</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES DONS ET AIDES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C310</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>40</N__Enr.>
+    <IDRegimeDeclaration>576</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DONS &amp; AIDES DE P.N.P.SUITE ENTREPOT DESTINES A L'ETAT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C311</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>41</N__Enr.>
+    <IDRegimeDeclaration>577</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DESTINES A LA CROIX-ROUGE ET AUX OEUVRES DE BIENFAISANCE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C312</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>42</N__Enr.>
+    <IDRegimeDeclaration>578</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DOS AIDES PR ORGANISME A CARACTERE CULTUREL OU SOCIAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C313</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>43</N__Enr.>
+    <IDRegimeDeclaration>579</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C320</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>44</N__Enr.>
+    <IDRegimeDeclaration>580</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE EXCEPTIONNELLE SUITE ENTREPOT DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C321</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>45</N__Enr.>
+    <IDRegimeDeclaration>581</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE D'ENTREPOT DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C322</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>46</N__Enr.>
+    <IDRegimeDeclaration>582</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DU CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C330</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>47</N__Enr.>
+    <IDRegimeDeclaration>583</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE TOTALE TITRE CODE INVEST. SUITE ENTREPOT DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C331</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>48</N__Enr.>
+    <IDRegimeDeclaration>584</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TAXATION PARTIELLE TITRE CODE INVEST. SUITE ENTREPOT DE PNP.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C332</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>49</N__Enr.>
+    <IDRegimeDeclaration>585</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME STABILISE SUITE ENTREPOT DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C333</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>50</N__Enr.>
+    <IDRegimeDeclaration>586</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DROIT SUSPEND SORTIE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C338</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>51</N__Enr.>
+    <IDRegimeDeclaration>587</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE ENTREPOT NOUVEAU CODE INVESTISSEMENT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C339</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>52</N__Enr.>
+    <IDRegimeDeclaration>588</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE DIPLOMATIQUE SUITE ENTREPOT DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C340</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>53</N__Enr.>
+    <IDRegimeDeclaration>589</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGULARISATION AVITAILLEMENTS NAVIRES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C380</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>54</N__Enr.>
+    <IDRegimeDeclaration>590</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C390</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>55</N__Enr.>
+    <IDRegimeDeclaration>591</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A CONSOMMAT.SUITE ENTREPOT D'EMBALLAGES FABRIQUES EN AT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C399</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>56</N__Enr.>
+    <IDRegimeDeclaration>592</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.DE PP SUITE ENTREPOT OU USINE EXERCEE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C4</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>57</N__Enr.>
+    <IDRegimeDeclaration>593</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE D'ENTREPOT DE P.P</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C401</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>58</N__Enr.>
+    <IDRegimeDeclaration>594</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE D'ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C402</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>59</N__Enr.>
+    <IDRegimeDeclaration>595</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE ENTREPOT APRES A.T. DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C403</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>60</N__Enr.>
+    <IDRegimeDeclaration>596</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION PP MATIERE PREMIERE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C405</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>61</N__Enr.>
+    <IDRegimeDeclaration>597</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DONS ET AIDES SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C410</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>62</N__Enr.>
+    <IDRegimeDeclaration>598</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C420</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>63</N__Enr.>
+    <IDRegimeDeclaration>599</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE EXCEPTIONNELLE SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C421</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>64</N__Enr.>
+    <IDRegimeDeclaration>600</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE D'ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C422</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>65</N__Enr.>
+    <IDRegimeDeclaration>601</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENTS DES NAVIRES SENEGALAIS SUITE CONSIGNATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C424</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>66</N__Enr.>
+    <IDRegimeDeclaration>602</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT BATEAUX PECHE SENEGALAIS EN SOUTES NATIOTIONAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C425</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>67</N__Enr.>
+    <IDRegimeDeclaration>603</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE  CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C430</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>68</N__Enr.>
+    <IDRegimeDeclaration>604</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE TOTALE TITRE CODE INVEST.SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C431</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>69</N__Enr.>
+    <IDRegimeDeclaration>605</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TAXATION PARTIELLE TITRE CODE INVEST.SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C432</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>70</N__Enr.>
+    <IDRegimeDeclaration>606</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME STABILISE SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C433</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>71</N__Enr.>
+    <IDRegimeDeclaration>607</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DROIT SUSPENDU SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C438</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>72</N__Enr.>
+    <IDRegimeDeclaration>608</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION DE PP SUITE ENTREPOT.NVEAU CODE INVESTISSE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C439</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>73</N__Enr.>
+    <IDRegimeDeclaration>609</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE DIPLOMATIQUE SUITE ENTREPOT DE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C440</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>74</N__Enr.>
+    <IDRegimeDeclaration>610</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGULARISATION TAXE SUR LE PETROLE BRUT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C450</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>75</N__Enr.>
+    <IDRegimeDeclaration>611</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGULARISATION AVITAILLEMENT NAVIRES EN PRODUITS PETROLIERS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C480</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>76</N__Enr.>
+    <IDRegimeDeclaration>612</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C490</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>77</N__Enr.>
+    <IDRegimeDeclaration>613</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION SUITE AT(REGIME COMMUN:A NE PAS UTILISER)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C500</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>78</N__Enr.>
+    <IDRegimeDeclaration>614</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION SUITE A.T. EXCEPTIONNELLE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C501</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>79</N__Enr.>
+    <IDRegimeDeclaration>615</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.SUITE A.T POUR PERFECTIONNEMENT ACTIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C502</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>80</N__Enr.>
+    <IDRegimeDeclaration>616</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE A.T SPECIALE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C503</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>81</N__Enr.>
+    <IDRegimeDeclaration>617</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A CONSOMMATION SUITE ATN REGLEMENT 04/2000 UEMOA</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C504</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>82</N__Enr.>
+    <IDRegimeDeclaration>618</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES DONS ET AIDES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C510</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>83</N__Enr.>
+    <IDRegimeDeclaration>619</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DESTINES A L'ETAT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C511</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>84</N__Enr.>
+    <IDRegimeDeclaration>620</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DESTINES A LA CROIX-ROUGE ET AUX OEUVRES DE BIENFAISANCE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C512</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>85</N__Enr.>
+    <IDRegimeDeclaration>621</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>A CARACTERE CULTUREL ET SOCIAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C513</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>86</N__Enr.>
+    <IDRegimeDeclaration>622</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C520</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>87</N__Enr.>
+    <IDRegimeDeclaration>623</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE EXCEPTIONNELLE SUITE A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C521</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>88</N__Enr.>
+    <IDRegimeDeclaration>624</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C522</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>89</N__Enr.>
+    <IDRegimeDeclaration>625</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C530</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>90</N__Enr.>
+    <IDRegimeDeclaration>626</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE TOTALE SUITE A.T TITRE CODE INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C531</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>91</N__Enr.>
+    <IDRegimeDeclaration>627</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TAXATION PARTIELLE SUITE A.T TITRE CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C532</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>92</N__Enr.>
+    <IDRegimeDeclaration>628</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME STABILISE SUITE A.T TITRE CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C533</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>93</N__Enr.>
+    <IDRegimeDeclaration>629</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DROIT SUSPENDU</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C538</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>94</N__Enr.>
+    <IDRegimeDeclaration>630</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>M.A.C NOUVEAU CODE INVESTISSEMENT SUITE A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C539</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>95</N__Enr.>
+    <IDRegimeDeclaration>631</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE DIPLOMATIQUE SUITE A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C540</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>96</N__Enr.>
+    <IDRegimeDeclaration>632</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C590</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>97</N__Enr.>
+    <IDRegimeDeclaration>633</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION SUITE D'IMPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C600</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>98</N__Enr.>
+    <IDRegimeDeclaration>634</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES DONS ET AIDES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C610</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>99</N__Enr.>
+    <IDRegimeDeclaration>635</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DONS ET AIDES SUITE IMPORTATION DIRECTE DESTINES A L'ETAT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C611</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>100</N__Enr.>
+    <IDRegimeDeclaration>636</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DESTINES A LA CROIX-ROUGE ET AUX OEUVRES DE BIENFAISANCE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C612</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>101</N__Enr.>
+    <IDRegimeDeclaration>637</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>A CARACTERE CULTUREL ET SOCIAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C613</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>102</N__Enr.>
+    <IDRegimeDeclaration>638</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C620</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>103</N__Enr.>
+    <IDRegimeDeclaration>639</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXEMPTION EXCEPTIONNELLE SUITE IMPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C621</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>104</N__Enr.>
+    <IDRegimeDeclaration>640</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE IMPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C622</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>105</N__Enr.>
+    <IDRegimeDeclaration>641</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A CONSOMMATION SUITE IT AU TITRE DU CODE INVESTISSEMENT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C631</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>106</N__Enr.>
+    <IDRegimeDeclaration>642</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MAC SUITE IMPORTATION TEMPORAIRE NVEAU CODE INVESTISSEMENT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C639</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>107</N__Enr.>
+    <IDRegimeDeclaration>643</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM SUITE IMPORT.TEMPORAIRE.FRANCHISE.DIPLOMATIQUE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C640</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>108</N__Enr.>
+    <IDRegimeDeclaration>644</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C690</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>109</N__Enr.>
+    <IDRegimeDeclaration>645</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION EN SUITE D'EXPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C800</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>110</N__Enr.>
+    <IDRegimeDeclaration>646</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.DONS ET AIDES SUITE EXPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C810</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>111</N__Enr.>
+    <IDRegimeDeclaration>647</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DES ADMISSIONS EXCEPTIONNELLES EN FRANCHISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C820</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>112</N__Enr.>
+    <IDRegimeDeclaration>648</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE EXCEPTIONNELLE SUITE EXPORT.TEMPORAIE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C821</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>113</N__Enr.>
+    <IDRegimeDeclaration>649</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>FRANCHISE CONDITIONNELLE SUITE EXPORT.TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C822</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>114</N__Enr.>
+    <IDRegimeDeclaration>650</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AU TITRE DU CODE DES INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C830</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>115</N__Enr.>
+    <IDRegimeDeclaration>651</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.SUITE EXPORT.TEMPO.TITRE CODE INVESTISSEMENTS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C831</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>116</N__Enr.>
+    <IDRegimeDeclaration>652</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TAXATION PARTIELLE SUITE EXPORT.TEMPO.TITRE CODE INVESTIS.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C832</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>117</N__Enr.>
+    <IDRegimeDeclaration>653</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME STABILISE SUITE EXPORT.TEMPO.TITRE CODE INVESTIS.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C833</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>118</N__Enr.>
+    <IDRegimeDeclaration>654</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DROIT SUSPENDU</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C838</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>119</N__Enr.>
+    <IDRegimeDeclaration>655</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMM.SUITE EXPORTATION TEMPORAIRE.FRANCHISE.DIPLO.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C840</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>120</N__Enr.>
+    <IDRegimeDeclaration>656</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C890</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>121</N__Enr.>
+    <IDRegimeDeclaration>657</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>SORTIE DE ZONE FRANCHE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C930</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>122</N__Enr.>
+    <IDRegimeDeclaration>658</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION EN SORTIE DE ZFID (TAXATION NORMALE)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C931</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>123</N__Enr.>
+    <IDRegimeDeclaration>659</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE A LA ZFID (FRANCHISE TOTALE) EXO.EXC</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C932</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>124</N__Enr.>
+    <IDRegimeDeclaration>660</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOMMATION SUITE ZFID (REGIMES STABILISES)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C933</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>125</N__Enr.>
+    <IDRegimeDeclaration>661</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.SUITE ZFID (FRANCHISE AU TITRE DU CODE INVEST.)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C934</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>126</N__Enr.>
+    <IDRegimeDeclaration>662</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE CONSOM.SUITE ZFID (TAXATION PARTIELLE TITRE C.INVEST.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C935</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>127</N__Enr.>
+    <IDRegimeDeclaration>663</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>DROIT SUSPENDU SUITE Z.F.I.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C938</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>128</N__Enr.>
+    <IDRegimeDeclaration>664</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MISE A LA CONSOMMATION DE VEHICULES ET MATERIELS APRES ZFI</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C939</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>129</N__Enr.>
+    <IDRegimeDeclaration>665</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION SUITE ENTREP.FRANCH.PRIVILEGE DIPLOMATIQUE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C950</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>130</N__Enr.>
+    <IDRegimeDeclaration>666</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION EN SORTIE D'ENTREP.FRANCHE.TAXATION NORMALE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C951</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>131</N__Enr.>
+    <IDRegimeDeclaration>667</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION EN SORTIE ENTREP.FRANCH.EXONERATION TOTALE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C952</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>132</N__Enr.>
+    <IDRegimeDeclaration>668</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION CARBURANT PAR ENTREPRISE FRANCHE EXPORTATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C953</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>133</N__Enr.>
+    <IDRegimeDeclaration>669</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION EN SORTIE ENTREP.FRANCH.EXO CODE INVESTISSEMNT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C954</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>134</N__Enr.>
+    <IDRegimeDeclaration>670</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION SUITE ENTREP.FRANCH.TAXATION PARTIELLE C.I</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C955</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>135</N__Enr.>
+    <IDRegimeDeclaration>671</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CONSOMMATION SUITE ENTREP.FRANCH.SUSPENSION PROVISOIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C958</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>136</N__Enr.>
+    <IDRegimeDeclaration>672</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIQUIDATION SUPPLEMENTAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>C990</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>137</N__Enr.>
+    <IDRegimeDeclaration>673</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION SIMPLE SORTIE SANS RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E100</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>138</N__Enr.>
+    <IDRegimeDeclaration>674</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION SIMPLE SORTIE AVEC RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E101</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>139</N__Enr.>
+    <IDRegimeDeclaration>675</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION EN DRAWBACK</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E102</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>140</N__Enr.>
+    <IDRegimeDeclaration>676</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION AGOA EN SIMPLE SORTIE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E103</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>141</N__Enr.>
+    <IDRegimeDeclaration>677</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION DE PRODUITS SENEGALAIS BENEF. D'UN REG.STABILISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E133</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>142</N__Enr.>
+    <IDRegimeDeclaration>678</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION MIXTE PRODTS SENEGALAIS-EMBALLAGES SS-DOUANE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E150</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>143</N__Enr.>
+    <IDRegimeDeclaration>679</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SANS RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E180</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>144</N__Enr.>
+    <IDRegimeDeclaration>680</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT AVEC RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E181</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>145</N__Enr.>
+    <IDRegimeDeclaration>681</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EMBALLAGES SS-DOUANE CONTENANT PRDTS SENEGALAI</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E199</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>146</N__Enr.>
+    <IDRegimeDeclaration>682</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION SIMPLE SORTIE SANS RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E200</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>147</N__Enr.>
+    <IDRegimeDeclaration>683</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION SIMPLE SORTIE AVEC RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E201</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>148</N__Enr.>
+    <IDRegimeDeclaration>684</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORT DE PP SENEGALAIS BENEFICIANT D'UN REG.STABILISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E233</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>149</N__Enr.>
+    <IDRegimeDeclaration>685</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SANS RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E280</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>150</N__Enr.>
+    <IDRegimeDeclaration>686</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT AVEC RESTITUTION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E281</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>151</N__Enr.>
+    <IDRegimeDeclaration>687</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION TEMPORAIRE POUR OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E800</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>152</N__Enr.>
+    <IDRegimeDeclaration>688</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION TEMPORAIRE POUR REPARATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E810</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>153</N__Enr.>
+    <IDRegimeDeclaration>689</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION TEMPORAIRE POUR DEMONSTRATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E820</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>154</N__Enr.>
+    <IDRegimeDeclaration>690</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION TEMPORAIRE POUR EXPOSITION  NON COMMERCIALE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E830</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>155</N__Enr.>
+    <IDRegimeDeclaration>691</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AUTRES CAS D'EXPORTATIONS TEMPORAIRES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E840</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>156</N__Enr.>
+    <IDRegimeDeclaration>692</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>SORTIE ZONE FRANCHE VERS L'ETRANGER</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E930</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>157</N__Enr.>
+    <IDRegimeDeclaration>693</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>LIVRAISON EN ZFID PRODUITS REPRIS SUR DECRET 76.782</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E935</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>158</N__Enr.>
+    <IDRegimeDeclaration>694</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORT.DE PRDTS SORTIS ENTREP.FRANCHE ORIGINE SENEGALAISE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E950</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>159</N__Enr.>
+    <IDRegimeDeclaration>695</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION PRODUITS SENEGALAIS SORTIS D'ENTREPRISE FRANCHE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>E951</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>160</N__Enr.>
+    <IDRegimeDeclaration>696</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE DE DEPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R100</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>161</N__Enr.>
+    <IDRegimeDeclaration>697</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION DIRECTE OU EN SUITE DE TRANSIT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R110</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>162</N__Enr.>
+    <IDRegimeDeclaration>698</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE DE TRANSIT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R120</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>163</N__Enr.>
+    <IDRegimeDeclaration>699</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration/>
+    <Observations/>
+    <CodeRegimeDeclaration>R139</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>164</N__Enr.>
+    <IDRegimeDeclaration>700</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R180</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>165</N__Enr.>
+    <IDRegimeDeclaration>701</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE DE DEPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R200</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>166</N__Enr.>
+    <IDRegimeDeclaration>702</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EN SUITE DE TRANSBORDEMENT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R210</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>167</N__Enr.>
+    <IDRegimeDeclaration>703</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE DE TRANSIT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R220</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>168</N__Enr.>
+    <IDRegimeDeclaration>704</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R280</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>169</N__Enr.>
+    <IDRegimeDeclaration>705</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT PRIVE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R300</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>170</N__Enr.>
+    <IDRegimeDeclaration>706</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION AGOA SUITE ENTREPOT APRES A.T OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R303</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>171</N__Enr.>
+    <IDRegimeDeclaration>707</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT PUBLIC DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R310</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>172</N__Enr.>
+    <IDRegimeDeclaration>708</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT INDUSTRIEL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R320</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>173</N__Enr.>
+    <IDRegimeDeclaration>709</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EXPORTATION AGOA SUITE ENTRPOT INDUSTRIEL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R323</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>174</N__Enr.>
+    <IDRegimeDeclaration>710</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R380</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>175</N__Enr.>
+    <IDRegimeDeclaration>711</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT OU USINE EXERCEE DE PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R4</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>176</N__Enr.>
+    <IDRegimeDeclaration>712</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT PRIVE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R400</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>177</N__Enr.>
+    <IDRegimeDeclaration>713</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION DE PRODUITS P{TROLIERS SUITE CONSIGNATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R404</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>178</N__Enr.>
+    <IDRegimeDeclaration>714</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREPOT INDUSTRIEL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R420</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>179</N__Enr.>
+    <IDRegimeDeclaration>715</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE USINE EXERCEE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R450</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>180</N__Enr.>
+    <IDRegimeDeclaration>716</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R480</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>181</N__Enr.>
+    <IDRegimeDeclaration>717</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT NAVIRES ETRANGERS SUITE CONSIGNATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R484</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>182</N__Enr.>
+    <IDRegimeDeclaration>718</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>AVITAILLEMENT NAVIRES ETRANGERS SUITE SOUTES NATIONALES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R485</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>183</N__Enr.>
+    <IDRegimeDeclaration>719</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>EN SUITE D'ADMISSION TEMPORAIRE ORDINAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R500</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>184</N__Enr.>
+    <IDRegimeDeclaration>720</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION AGOA EN SUITE D'A.T OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R503</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>185</N__Enr.>
+    <IDRegimeDeclaration>721</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE D'ADMISSION TEMPORAIRE SPECIALE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R510</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>186</N__Enr.>
+    <IDRegimeDeclaration>722</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE D'ADMISSION TEMPORAIRE EXCEPTIONNELLE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R520</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>187</N__Enr.>
+    <IDRegimeDeclaration>723</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE A.T POUR PERFECTIONNEMENT ACTIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R530</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>188</N__Enr.>
+    <IDRegimeDeclaration>724</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ATN APRES ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R531</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>189</N__Enr.>
+    <IDRegimeDeclaration>725</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION D'EMBALLAGES APRES CESSION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R535</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>190</N__Enr.>
+    <IDRegimeDeclaration>726</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE MUTATION D'AT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R550</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>191</N__Enr.>
+    <IDRegimeDeclaration>727</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION EN SUITE D'IMPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R600</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>192</N__Enr.>
+    <IDRegimeDeclaration>728</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R620</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>193</N__Enr.>
+    <IDRegimeDeclaration>729</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION AGOA EN SUITE REGIME FRANC</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R903</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>194</N__Enr.>
+    <IDRegimeDeclaration>730</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>SORTIE ZONE FRANCHE DE PRODUITS NON ORIGINAIRES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R930</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>195</N__Enr.>
+    <IDRegimeDeclaration>731</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION DE PRODUITS FABRIQUES EN ZONE FRANCHE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R931</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>196</N__Enr.>
+    <IDRegimeDeclaration>732</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORT.EN L'ETAT DE MARCH.(VEHICULES,MATERIELS)SUITE S939</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R939</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>197</N__Enr.>
+    <IDRegimeDeclaration>733</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION RESERVE DE RETOUR PRDTS ADMIS EN ENTREP.FRANCH</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R950</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>198</N__Enr.>
+    <IDRegimeDeclaration>734</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORT.PRODTS FABRIQ.EN ENTREP.FRACHE SANS ORIGINE SENEGAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R951</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>199</N__Enr.>
+    <IDRegimeDeclaration>735</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORT.SUITE ENTREP.FRANCH.D'EMBALLAGES FABRIQUES EN A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R953</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>200</N__Enr.>
+    <IDRegimeDeclaration>736</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REEXPORTATION SUITE ENTREP.FRANCH.VEHICULES,MATERIELS....</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>R959</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>201</N__Enr.>
+    <IDRegimeDeclaration>737</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT ORDINAIRE SUITE IMPORTATION DIRECTE,DEPOT,ETC</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S110</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>202</N__Enr.>
+    <IDRegimeDeclaration>738</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT ORDINAIRE SUITE REGIME SUSPENSIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S111</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>203</N__Enr.>
+    <IDRegimeDeclaration>739</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT INTERNATIONAL(T.R.I.E)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S120</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>204</N__Enr.>
+    <IDRegimeDeclaration>740</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT INTERNAT. DE PNP EN SUITE D'ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S121</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>205</N__Enr.>
+    <IDRegimeDeclaration>741</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT ORDINAIRE SUITE IMPORT. DIRECTE,DEPOT, PROD. PETROL.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S210</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>206</N__Enr.>
+    <IDRegimeDeclaration>742</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT ORDINAIRE EN SUITE D'ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S211</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>207</N__Enr.>
+    <IDRegimeDeclaration>743</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT INTERNATIONAL DE PRODUITS PETROLIERS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S220</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>208</N__Enr.>
+    <IDRegimeDeclaration>744</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>TRANSIT INTERNATIONAL DE PRDS PETROLIERS SUITE REG.SUSPENSIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S221</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>209</N__Enr.>
+    <IDRegimeDeclaration>745</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT FICTIF PRIVE SUITE TRANSB.DEPOT,TRANSIT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S300</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>210</N__Enr.>
+    <IDRegimeDeclaration>746</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT FICTIF PRIVE SUITE D'ENTREPOT(MUTATION)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S301</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>211</N__Enr.>
+    <IDRegimeDeclaration>747</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPOT PRIVE APRES A.T POUR OUVRAISON DE P.N.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S302</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>212</N__Enr.>
+    <IDRegimeDeclaration>748</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPOT PRIVE SUITE AUTRES CATEGORIES D'ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S303</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>213</N__Enr.>
+    <IDRegimeDeclaration>749</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPOT PUBLIC SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S310</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>214</N__Enr.>
+    <IDRegimeDeclaration>750</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MUTATION ENTREPOTS PUB.ENTR.PUB.SUITE ENTREP.PUBLIC (MUTA.)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S311</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>215</N__Enr.>
+    <IDRegimeDeclaration>751</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPOT PUBLIC SUITE ADMISSION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S312</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>216</N__Enr.>
+    <IDRegimeDeclaration>752</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREP.INDUSTRIEL SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S320</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>217</N__Enr.>
+    <IDRegimeDeclaration>753</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREP.INDUSTRIEL SUITE D'ENTREPOT (MUTATION)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S321</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>218</N__Enr.>
+    <IDRegimeDeclaration>754</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREP.INDUSTRIEL SUITE REGIMES D'OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S322</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>219</N__Enr.>
+    <IDRegimeDeclaration>755</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT OU USINE EXERCEE DE PRODUITS PETROLIERS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S4</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>220</N__Enr.>
+    <IDRegimeDeclaration>756</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT FICTIF PRIVE SUITE TRANSB.DEPOT,TRANSIT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S400</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>221</N__Enr.>
+    <IDRegimeDeclaration>757</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT FICTIF PRIVE SUITE D'ENTREPOT (MUTATION)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S401</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>222</N__Enr.>
+    <IDRegimeDeclaration>758</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT PRIVE APRES ADMISSION TEMPORAIREDE P.P.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S402</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>223</N__Enr.>
+    <IDRegimeDeclaration>759</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT FICTIF PRIVE SUITE A.T OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S403</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>224</N__Enr.>
+    <IDRegimeDeclaration>760</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN CONSIGNATION DE PRODUITS P{TROLIERS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S404</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>225</N__Enr.>
+    <IDRegimeDeclaration>761</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE DE PRODUITS PETROLIERS EN SOUTES NATIONALES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S405</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>226</N__Enr.>
+    <IDRegimeDeclaration>762</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CESSION DE PRODUITS P{TROLIERS SUITE CONSIGNATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S410</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>227</N__Enr.>
+    <IDRegimeDeclaration>763</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MUTATIONS EN SUITE DE SOUTES INTERNATIONALES DE PP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S414</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>228</N__Enr.>
+    <IDRegimeDeclaration>764</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MUTATION DE PRODUITS PETROLIERS EN SOUTES NATIONALES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S415</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>229</N__Enr.>
+    <IDRegimeDeclaration>765</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT INDUSTRIEL SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S420</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>230</N__Enr.>
+    <IDRegimeDeclaration>766</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT INDUSTRIEL SUITE D'ENTREPOT (MUTATION)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S421</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>231</N__Enr.>
+    <IDRegimeDeclaration>767</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPOT INDUSTRIEL SUITE D'ADMISSION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S422</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>232</N__Enr.>
+    <IDRegimeDeclaration>768</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN USINE EXERCEE DE P.P (REGIME SAR)</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S450</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>233</N__Enr.>
+    <IDRegimeDeclaration>769</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>BORDEREAU LIVRAISON PRDTS PETROLIERS POUR MARCHE LOCAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S451</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>234</N__Enr.>
+    <IDRegimeDeclaration>770</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>BORDEREAU LIVRAISON PRDTS PETROLIERS DESTINES REEXPORTATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S452</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>235</N__Enr.>
+    <IDRegimeDeclaration>771</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME S5</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S5</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>236</N__Enr.>
+    <IDRegimeDeclaration>772</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T.SPECIALE SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S510</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>237</N__Enr.>
+    <IDRegimeDeclaration>773</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T.S. SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S511</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>238</N__Enr.>
+    <IDRegimeDeclaration>774</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T.EXCEPTINNELLE SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S520</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>239</N__Enr.>
+    <IDRegimeDeclaration>775</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T.EXCEPTIONELLE SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S521</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>240</N__Enr.>
+    <IDRegimeDeclaration>776</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T POUR PERFECTIONNEMENT ACTIF SUITE IMPOR.DIRECT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S530</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>241</N__Enr.>
+    <IDRegimeDeclaration>777</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T PERFECTIONNEMENT ACTIF SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S531</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>242</N__Enr.>
+    <IDRegimeDeclaration>778</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>CESSION D'EMBALLAGES SOUS AT A EXPORTATEURS PRDTS SENEGALAIS</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S535</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>243</N__Enr.>
+    <IDRegimeDeclaration>779</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MUTATION DIRECTE D'AT à AT  D'EMBALLAGES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S550</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>244</N__Enr.>
+    <IDRegimeDeclaration>780</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN A.T SUITE ENTREPRISE FRANCHE D'EXPORTATION</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S551</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>245</N__Enr.>
+    <IDRegimeDeclaration>781</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>IMPORTATION TEMPORAIRE SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S600</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>246</N__Enr.>
+    <IDRegimeDeclaration>782</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN IMPORTATION TEMPORAIRE SUITE REGIME SUSPENSIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S601</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>247</N__Enr.>
+    <IDRegimeDeclaration>783</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>MUTATION D'IMPORTATION TEMPORAIRE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S602</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>248</N__Enr.>
+    <IDRegimeDeclaration>784</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>REGIME S9</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S9</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>249</N__Enr.>
+    <IDRegimeDeclaration>785</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ZONE FRANCHE INDUSTRIELLE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S930</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>250</N__Enr.>
+    <IDRegimeDeclaration>786</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN Z.F.I.D.SUITE D'IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S931</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>251</N__Enr.>
+    <IDRegimeDeclaration>787</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN Z.F.I.D. SUITE ENTREPOT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S932</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>252</N__Enr.>
+    <IDRegimeDeclaration>788</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE ZFID SUITE ENTREPOT APRES AT</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S933</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>253</N__Enr.>
+    <IDRegimeDeclaration>789</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ZFID SUITE REGIMES D'OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S934</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>254</N__Enr.>
+    <IDRegimeDeclaration>790</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN Z.F.I.D MARCHNDISES PRELEVEES SUR LE MARCHE LOCAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S935</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>255</N__Enr.>
+    <IDRegimeDeclaration>791</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN Z.F.I.D. DE VEHICULES ET MATERIELS SUITE REG.SUSP</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S938</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>256</N__Enr.>
+    <IDRegimeDeclaration>792</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN Z.F.I.D. DE VEHICULES ET MATERIELS SUITE IMP.DIREC</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S939</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>257</N__Enr.>
+    <IDRegimeDeclaration>793</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>RETOUR EN ENTREP.FRANCH.DE PDRTS PREALABLMT.REEXPORTES</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S950</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>258</N__Enr.>
+    <IDRegimeDeclaration>794</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPRISE FRANCHE SUITE IMPORTATION DIRECTE</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S951</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>259</N__Enr.>
+    <IDRegimeDeclaration>795</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPRISE FRANCHE SUITE ENTREPOT OU S951</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S952</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>260</N__Enr.>
+    <IDRegimeDeclaration>796</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPRISE FRANCHE SUITE ENTREPOT APRES A.T</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S953</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>261</N__Enr.>
+    <IDRegimeDeclaration>797</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPRISE FRANCHE SUITE REGIMES D'OUVRAISON</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S954</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>262</N__Enr.>
+    <IDRegimeDeclaration>798</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREE EN ENTREPRISE FRANCHE DE PRDTS PRIS DU MARCHE LOCAL</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S955</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>263</N__Enr.>
+    <IDRegimeDeclaration>799</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPR.FRANCH.VEHICULES,MATERIELS...SUITE REGIME SUSPENSIF</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S958</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+  <TABLE_CONTENU>
+    <N__Enr.>264</N__Enr.>
+    <IDRegimeDeclaration>800</IDRegimeDeclaration>
+    <LibelleRegimeDeclaration>ENTREPR.FRANCH.VEHICULES,MATERIELS....IMPORT.DIRECT.</LibelleRegimeDeclaration>
+    <Observations/>
+    <CodeRegimeDeclaration>S959</CodeRegimeDeclaration>
+  </TABLE_CONTENU>
+</WINDEV_TABLE>
