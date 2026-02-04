@@ -150,9 +150,37 @@ export const tiersAPI = {
     delete: (id) => api.delete(`/tiers/${id}`)
 };
 
+export const activitesAPI = {
+    getAll: () => api.get('/activites')
+};
+
 
 export const taxesAPI = {
     getAll: (nts) => api.get(`/taxes${nts ? `?nts=${nts}` : ''}`)
+};
+
+export const ordresTransitAPI = {
+    getAll: () => api.get('/ordres-transit'),
+    getOne: (id) => api.get(`/ordres-transit/${id}`),
+    getByDossier: (dossierId) => api.get(`/ordres-transit/dossier/${dossierId}`),
+    create: (data) => api.post('/ordres-transit', data),
+    update: (id, data) => api.put(`/ordres-transit/${id}`, data),
+    delete: (id) => api.delete(`/ordres-transit/${id}`)
+};
+
+export const incotermsAPI = {
+    getAll: () => api.get('/incoterms'),
+    create: (data) => api.post('/incoterms', data)
+};
+
+export const regimesOTAPI = {
+    getAll: () => api.get('/regimes-ot'),
+    create: (data) => api.post('/regimes-ot', data)
+};
+
+export const typesDocumentsOTAPI = {
+    getAll: () => api.get('/types-documents-ot'),
+    create: (data) => api.post('/types-documents-ot', data)
 };
 
 export const statisticsAPI = {

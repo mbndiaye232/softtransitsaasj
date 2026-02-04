@@ -18,10 +18,20 @@ router.get('/', checkPermission('TIERS', 'can_view'), async (req, res) => {
             SELECT 
                 t.*,
                 s.NomSociete as structur_name,
-                st.libelle as statut_label
+                st.libelle as statut_label,
+                acts.activity_ids,
+                acts.activity_labels
             FROM tiers t
             JOIN structur s ON t.structur_id = s.IDSociete
             LEFT JOIN statuts st ON t.IDStatuts = st.IDStatuts
+            LEFT JOIN (
+                SELECT ta.id_tier, 
+                       GROUP_CONCAT(ta.id_activite) as activity_ids, 
+                       GROUP_CONCAT(a.libelle) as activity_labels
+                FROM tier_activites ta
+                JOIN activites a ON ta.id_activite = a.id_activite
+                GROUP BY ta.id_tier
+            ) acts ON t.IDTiers = acts.id_tier
         `;
         let params = [];
 
@@ -84,49 +94,74 @@ router.post('/', checkPermission('TIERS', 'can_create'), async (req, res) => {
             NINEATiers,
             SiteWeb,
             IDStatuts,
-            Observations
+            Observations,
+            activityIds // Array of IDs
         } = req.body;
 
         if (!libtier) {
             return res.status(400).json({ error: 'Le libellé est requis' });
         }
 
-        const [result] = await pool.query(
-            `INSERT INTO tiers (
-                structur_id, libtier, adresseTiers, TelTiers, CelTiers, 
-                EmailTiers, NINEATiers, SiteWeb, IDStatuts, Observations,
-                SaisiLe, IdAgentSaisi
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?)`,
-            [
-                req.structur_id,
-                libtier,
-                adresseTiers || null,
-                TelTiers || null,
-                CelTiers || null,
-                EmailTiers || null,
-                NINEATiers || null,
-                SiteWeb || null,
-                IDStatuts || null,
-                Observations || null,
-                req.user.id
-            ]
-        );
+        const connection = await pool.getConnection();
+        await connection.beginTransaction();
 
-        await auditService.log({
-            agent_id: req.user.id,
-            structur_id: req.user.structur_id,
-            action: 'CREATE',
-            resource_type: 'TIER',
-            resource_id: result.insertId,
-            details: { name: libtier },
-            ip_address: req.ip,
-            user_agent: req.headers['user-agent']
-        });
+        try {
+            const [result] = await connection.query(
+                `INSERT INTO tiers (
+                    structur_id, libtier, adresseTiers, TelTiers, CelTiers, 
+                    EmailTiers, NINEATiers, SiteWeb, IDStatuts, Observations,
+                    SaisiLe, IdAgentSaisi
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?)`,
+                [
+                    req.structur_id,
+                    libtier,
+                    adresseTiers || null,
+                    TelTiers || null,
+                    CelTiers || null,
+                    EmailTiers || null,
+                    NINEATiers || null,
+                    SiteWeb || null,
+                    IDStatuts || null,
+                    Observations || null,
+                    req.user.id
+                ]
+            );
 
-        res.status(201).json({
-            id: result.insertId,
-            message: 'Tier créé avec succès'
-        });
+            const tierId = result.insertId;
+
+            // Save activities
+            if (activityIds && Array.isArray(activityIds)) {
+                const activityValues = activityIds.map(activityId => [tierId, activityId]);
+                if (activityValues.length > 0) {
+                    await connection.query(
+                        'INSERT INTO tier_activites (id_tier, id_activite) VALUES ?',
+                        [activityValues]
+                    );
+                }
+            }
+
+            await auditService.log({
+                agent_id: req.user.id,
+                structur_id: req.user.structur_id,
+                action: 'CREATE',
+                resource_type: 'TIER',
+                resource_id: tierId,
+                details: { name: libtier },
+                ip_address: req.ip,
+                user_agent: req.headers['user-agent']
+            });
+
+            await connection.commit();
+            res.status(201).json({
+                id: tierId,
+                message: 'Tier créé avec succès'
+            });
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
 
     } catch (error) {
         console.error('Create tier error:', error);
@@ -149,7 +184,8 @@ router.put('/:id', checkPermission('TIERS', 'can_edit'), async (req, res) => {
             NINEATiers,
             SiteWeb,
             IDStatuts,
-            Observations
+            Observations,
+            activityIds // Array of IDs
         } = req.body;
 
         // Verify existence and ownership
@@ -165,39 +201,63 @@ router.put('/:id', checkPermission('TIERS', 'can_edit'), async (req, res) => {
             return res.status(404).json({ error: 'Tier not found' });
         }
 
-        await pool.query(
-            `UPDATE tiers SET 
-                libtier = ?, adresseTiers = ?, TelTiers = ?, CelTiers = ?, 
-                EmailTiers = ?, NINEATiers = ?, SiteWeb = ?, IDStatuts = ?, 
-                Observations = ?, Modifiele = NOW(), idagentmodification = ?
-            WHERE IDTiers = ?`,
-            [
-                libtier,
-                adresseTiers || null,
-                TelTiers || null,
-                CelTiers || null,
-                EmailTiers || null,
-                NINEATiers || null,
-                SiteWeb || null,
-                IDStatuts || null,
-                Observations || null,
-                req.user.id,
-                req.params.id
-            ]
-        );
+        const connection = await pool.getConnection();
+        await connection.beginTransaction();
 
-        await auditService.log({
-            agent_id: req.user.id,
-            structur_id: req.user.structur_id,
-            action: 'UPDATE',
-            resource_type: 'TIER',
-            resource_id: req.params.id,
-            details: { name: libtier },
-            ip_address: req.ip,
-            user_agent: req.headers['user-agent']
-        });
+        try {
+            await connection.query(
+                `UPDATE tiers SET 
+                    libtier = ?, adresseTiers = ?, TelTiers = ?, CelTiers = ?, 
+                    EmailTiers = ?, NINEATiers = ?, SiteWeb = ?, IDStatuts = ?, 
+                    Observations = ?, Modifiele = NOW(), idagentmodification = ?
+                WHERE IDTiers = ?`,
+                [
+                    libtier,
+                    adresseTiers || null,
+                    TelTiers || null,
+                    CelTiers || null,
+                    EmailTiers || null,
+                    NINEATiers || null,
+                    SiteWeb || null,
+                    IDStatuts || null,
+                    Observations || null,
+                    req.user.id,
+                    req.params.id
+                ]
+            );
 
-        res.json({ message: 'Tier mis à jour avec succès' });
+            // Update activities: Delete and Re-insert
+            await connection.query('DELETE FROM tier_activites WHERE id_tier = ?', [req.params.id]);
+
+            if (activityIds && Array.isArray(activityIds)) {
+                const activityValues = activityIds.map(activityId => [req.params.id, activityId]);
+                if (activityValues.length > 0) {
+                    await connection.query(
+                        'INSERT INTO tier_activites (id_tier, id_activite) VALUES ?',
+                        [activityValues]
+                    );
+                }
+            }
+
+            await auditService.log({
+                agent_id: req.user.id,
+                structur_id: req.user.structur_id,
+                action: 'UPDATE',
+                resource_type: 'TIER',
+                resource_id: req.params.id,
+                details: { name: libtier },
+                ip_address: req.ip,
+                user_agent: req.headers['user-agent']
+            });
+
+            await connection.commit();
+            res.json({ message: 'Tier mis à jour avec succès' });
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
 
     } catch (error) {
         console.error('Update tier error:', error);

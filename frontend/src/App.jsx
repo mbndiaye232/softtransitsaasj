@@ -19,6 +19,8 @@ import NoteDeDetail from './pages/NoteDeDetail'
 import ProductList from './pages/ProductList'
 import TiersPage from './pages/TiersPage'
 import CotationPage from './pages/CotationPage'
+import OrdreTransitPage from './pages/OrdreTransitPage'
+import ReferenceDataOTPage from './pages/ReferenceDataOTPage'
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -109,6 +111,16 @@ function App() {
                     <Route path="/cotations" element={
                         <ProtectedRoute>
                             <CotationPage />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/ordres-transit" element={
+                        <ProtectedRoute>
+                            <OrdreTransitPage />
+                        </ProtectedRoute>
+                    } />
+                    <Route path="/config-transit" element={
+                        <ProtectedRoute>
+                            <ReferenceDataOTPage />
                         </ProtectedRoute>
                     } />
                     <Route path="/dossiers" element={

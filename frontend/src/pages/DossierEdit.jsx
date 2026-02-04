@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { dossiersAPI, clientsAPI, authAPI } from '../services/api';
 import CotationManager from '../components/dossiers/CotationManager';
+import OrdreTransitManager from '../components/dossiers/OrdreTransitManager';
 import {
     Save,
     X,
@@ -48,6 +49,15 @@ const DossierEdit = () => {
     const [editCode, setEditCode] = useState(false);
     const [file, setFile] = useState(null);
     const [error, setError] = useState(null);
+    const [activeTab, setActiveTab] = useState('detail');
+
+    const tabs = [
+        { id: 'detail', label: 'Détails du Dossier', icon: <Info size={18} /> },
+        { id: 'cotation', label: 'Cotation / Agent', icon: <User size={18} /> },
+        { id: 'ot', label: 'Ordre de Transit', icon: <FileText size={18} /> },
+        { id: 'transport', label: 'Titre de Transport', icon: <LinkIcon size={18} />, disabled: true },
+        { id: 'declaration', label: 'Déclaration', icon: <Shield size={18} />, disabled: true }
+    ];
 
     useEffect(() => {
         const fetchData = async () => {
@@ -148,6 +158,13 @@ const DossierEdit = () => {
                 
                 .header-title-box h1 { font-size: 1.5rem; font-weight: 800; color: var(--slate-900); margin: 0.5rem 0 0 0; }
                 
+                /* Tab System */
+                .tab-bar { display: flex; gap: 0.5rem; background: white; padding: 0.5rem; border-radius: 1rem; border: 1px solid var(--border); margin-bottom: 1rem; position: sticky; top: 1rem; z-index: 10; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+                .tab-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-size: 0.875rem; font-weight: 700; color: var(--slate-500); cursor: pointer; transition: all 0.2s; border: none; background: transparent; }
+                .tab-item:hover:not(.disabled) { background: var(--slate-50); color: var(--slate-900); }
+                .tab-item.active { background: var(--primary); color: white; box-shadow: 0 4px 12px color-mix(in srgb, var(--primary), transparent 70%); }
+                .tab-item.disabled { opacity: 0.5; cursor: not-allowed; }
+
                 .form-main { background: white; border-radius: var(--radius-xl); border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
                 .client-strip { padding: 1.25rem 2rem; background: var(--primary-light); border-bottom: 1px solid color-mix(in srgb, var(--primary), transparent 90%); display: flex; align-items: center; gap: 1rem; }
                 .client-strip h2 { font-size: 0.875rem; font-weight: 800; color: var(--primary); margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -228,183 +245,207 @@ const DossierEdit = () => {
                     </div>
                 </header>
 
-                <form className="form-main" onSubmit={handleSubmit}>
-                    <div className="client-strip">
-                        <Building2 size={20} color="var(--primary)" />
-                        <h2>Client : <span style={{ color: 'var(--slate-900)' }}>{clientName}</span></h2>
-                    </div>
+                <nav className="tab-bar">
+                    {tabs.map(tab => (
+                        <button
+                            key={tab.id}
+                            type="button"
+                            className={`tab-item ${activeTab === tab.id ? 'active' : ''} ${tab.disabled ? 'disabled' : ''}`}
+                            onClick={() => !tab.disabled && setActiveTab(tab.id)}
+                        >
+                            {tab.icon}
+                            {tab.label}
+                        </button>
+                    ))}
+                </nav>
 
-                    <div className="form-content">
-                        {/* Section 1: Informations Générales */}
-                        <div className="form-section">
-                            <div className="section-header">
-                                <FileSearch size={14} color="var(--slate-400)" />
-                                <span className="section-title">Identification & Type</span>
-                            </div>
-
-                            <div className="grid-form">
-                                <div className="input-group col-4">
-                                    <label className="input-label">Libellé du dossier</label>
-                                    <input
-                                        name="label"
-                                        className="premium-input"
-                                        value={form.label}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="input-group col-2">
-                                    <label className="input-label">Nature</label>
-                                    <select
-                                        name="nature"
-                                        className="premium-select"
-                                        value={form.nature}
-                                        onChange={handleChange}
-                                        disabled={!editCode}
-                                    >
-                                        <option value="IMP">Importation</option>
-                                        <option value="EXP">Exportation</option>
-                                    </select>
-                                </div>
-                                <div className="input-group col-2">
-                                    <label className="input-label">Expédition</label>
-                                    <select
-                                        name="mode"
-                                        className="premium-select"
-                                        value={form.mode}
-                                        onChange={handleChange}
-                                        disabled={!editCode}
-                                    >
-                                        <option value="MA">Maritime</option>
-                                        <option value="AE">Aérien</option>
-                                        <option value="TE">Terrestre</option>
-                                    </select>
-                                </div>
-                                <div className="input-group col-2">
-                                    <label className="input-label">Type</label>
-                                    <select
-                                        name="type"
-                                        className="premium-select"
-                                        value={form.type}
-                                        onChange={handleChange}
-                                        disabled={!editCode}
-                                    >
-                                        <option value="TC">Conteneur</option>
-                                        <option value="GR">Groupage</option>
-                                        <option value="CO">Conv.</option>
-                                    </select>
-                                </div>
-                                <div className="input-group col-2">
-                                    <label className="input-label">Document</label>
-                                    <input
-                                        className="premium-input"
-                                        readOnly
-                                        value={form.mode === 'MA' ? 'BL' : form.mode === 'AE' ? 'LTA' : 'LVI'}
-                                    />
-                                </div>
-                            </div>
+                {activeTab === 'detail' && (
+                    <form className="form-main" onSubmit={handleSubmit}>
+                        <div className="client-strip">
+                            <Building2 size={20} color="var(--primary)" />
+                            <h2>Client : <span style={{ color: 'var(--slate-900)' }}>{clientName}</span></h2>
                         </div>
 
-                        {/* Section 2: Validation & Fichiers */}
-                        <div className="form-section">
-                            <div className="section-header">
-                                <Shield size={14} color="var(--slate-400)" />
-                                <span className="section-title">Validation & Fiches</span>
-                            </div>
+                        <div className="form-content">
+                            {/* Section 1: Informations Générales */}
+                            <div className="form-section">
+                                <div className="section-header">
+                                    <FileSearch size={14} color="var(--slate-400)" />
+                                    <span className="section-title">Identification & Type</span>
+                                </div>
 
-                            <div className="grid-form">
-                                <div className="input-group col-4">
-                                    <label className="input-label">Numéro de dossier</label>
-                                    <div className="input-with-actions">
-                                        <input className="premium-input" readOnly value={dossierInfo?.code || ''} />
-                                        <button
-                                            type="button"
-                                            className={`mini-btn ${editCode ? 'active' : ''}`}
-                                            onClick={() => setEditCode(!editCode)}
-                                            title="Modifier les champs verrouillés"
+                                <div className="grid-form">
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Libellé du dossier</label>
+                                        <input
+                                            name="label"
+                                            className="premium-input"
+                                            value={form.label}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="input-group col-2">
+                                        <label className="input-label">Nature</label>
+                                        <select
+                                            name="nature"
+                                            className="premium-select"
+                                            value={form.nature}
+                                            onChange={handleChange}
+                                            disabled={!editCode}
                                         >
-                                            <Settings size={16} />
-                                        </button>
+                                            <option value="IMP">Importation</option>
+                                            <option value="EXP">Exportation</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-group col-2">
+                                        <label className="input-label">Expédition</label>
+                                        <select
+                                            name="mode"
+                                            className="premium-select"
+                                            value={form.mode}
+                                            onChange={handleChange}
+                                            disabled={!editCode}
+                                        >
+                                            <option value="MA">Maritime</option>
+                                            <option value="AE">Aérien</option>
+                                            <option value="TE">Terrestre</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-group col-2">
+                                        <label className="input-label">Type</label>
+                                        <select
+                                            name="type"
+                                            className="premium-select"
+                                            value={form.type}
+                                            onChange={handleChange}
+                                            disabled={!editCode}
+                                        >
+                                            <option value="TC">Conteneur</option>
+                                            <option value="GR">Groupage</option>
+                                            <option value="CO">Conv.</option>
+                                        </select>
+                                    </div>
+                                    <div className="input-group col-2">
+                                        <label className="input-label">Document</label>
+                                        <input
+                                            className="premium-input"
+                                            readOnly
+                                            value={form.mode === 'MA' ? 'BL' : form.mode === 'AE' ? 'LTA' : 'LVI'}
+                                        />
                                     </div>
                                 </div>
-                                <div className="input-group col-4">
-                                    <label className="input-label">Validé par</label>
-                                    <input className="premium-input" readOnly value={currentUser?.name || ''} />
+                            </div>
+
+                            {/* Section 2: Validation & Fichiers */}
+                            <div className="form-section">
+                                <div className="section-header">
+                                    <Shield size={14} color="var(--slate-400)" />
+                                    <span className="section-title">Validation & Fiches</span>
                                 </div>
-                                <div className="input-group col-4">
-                                    <label className="input-label">Fiche Dossier (Scan)</label>
-                                    <input type="file" className="premium-input" onChange={handleFileChange} style={{ padding: '0.5rem' }} />
-                                    {dossierInfo?.fileUrl && (
-                                        <a
-                                            href={`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}${dossierInfo.fileUrl}`}
-                                            target="_blank"
-                                            className="back-link"
-                                            style={{ marginTop: '0.25rem', fontSize: '0.75rem' }}
-                                        >
-                                            <LinkIcon size={12} /> Voir la fiche actuelle
-                                        </a>
-                                    )}
+
+                                <div className="grid-form">
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Numéro de dossier</label>
+                                        <div className="input-with-actions">
+                                            <input className="premium-input" readOnly value={dossierInfo?.code || ''} />
+                                            <button
+                                                type="button"
+                                                className={`mini-btn ${editCode ? 'active' : ''}`}
+                                                onClick={() => setEditCode(!editCode)}
+                                                title="Modifier les champs verrouillés"
+                                            >
+                                                <Settings size={16} />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Validé par</label>
+                                        <input className="premium-input" readOnly value={currentUser?.name || ''} />
+                                    </div>
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Fiche Dossier (Scan)</label>
+                                        <input type="file" className="premium-input" onChange={handleFileChange} style={{ padding: '0.5rem' }} />
+                                        {dossierInfo?.fileUrl && (
+                                            <a
+                                                href={`${import.meta.env.VITE_API_URL || 'http://localhost:3001/api'}${dossierInfo.fileUrl}`}
+                                                target="_blank"
+                                                className="back-link"
+                                                style={{ marginTop: '0.25rem', fontSize: '0.75rem' }}
+                                            >
+                                                <LinkIcon size={12} /> Voir la fiche actuelle
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Section 3: Contact & Observations */}
+                            <div className="form-section">
+                                <div className="section-header">
+                                    <User size={14} color="var(--slate-400)" />
+                                    <span className="section-title">Contact & Suivi</span>
+                                </div>
+
+                                <div className="grid-form">
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Point focal</label>
+                                        <input name="contactName" className="premium-input" value={form.contactName} onChange={handleChange} placeholder="Nom du contact..." />
+                                    </div>
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Téléphone</label>
+                                        <input name="contactPhone" className="premium-input" value={form.contactPhone} onChange={handleChange} placeholder="+221..." />
+                                    </div>
+                                    <div className="input-group col-4">
+                                        <label className="input-label">Email</label>
+                                        <input name="contactEmail" className="premium-input" value={form.contactEmail} onChange={handleChange} placeholder="email@domaine.com" />
+                                    </div>
+                                    <div className="input-group col-12">
+                                        <label className="input-label">Observations / Notes</label>
+                                        <textarea name="observations" rows="3" className="premium-textarea" value={form.observations} onChange={handleChange} placeholder="Commentaires internes..." />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
+                                <div className="checkbox-card" onClick={() => handleChange({ target: { name: 'isFacturable', type: 'checkbox', checked: !form.isFacturable } })}>
+                                    <input type="checkbox" checked={form.isFacturable} readOnly />
+                                    <div>
+                                        <div className="checkbox-label">Prêt pour facturation</div>
+                                        <div style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>Marquer comme éligible à la clôture financière</div>
+                                    </div>
+                                </div>
+                                <div className="checkbox-card" onClick={() => handleChange({ target: { name: 'quotationStep', type: 'checkbox', checked: !form.quotationStep } })}>
+                                    <input type="checkbox" checked={form.quotationStep} readOnly />
+                                    <div>
+                                        <div className="checkbox-label">Étape de Cotation</div>
+                                        <div style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>Requiert l'imputation d'un déclarant</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Section 3: Contact & Observations */}
-                        <div className="form-section">
-                            <div className="section-header">
-                                <User size={14} color="var(--slate-400)" />
-                                <span className="section-title">Contact & Suivi</span>
-                            </div>
-
-                            <div className="grid-form">
-                                <div className="input-group col-4">
-                                    <label className="input-label">Point focal</label>
-                                    <input name="contactName" className="premium-input" value={form.contactName} onChange={handleChange} placeholder="Nom du contact..." />
-                                </div>
-                                <div className="input-group col-4">
-                                    <label className="input-label">Téléphone</label>
-                                    <input name="contactPhone" className="premium-input" value={form.contactPhone} onChange={handleChange} placeholder="+221..." />
-                                </div>
-                                <div className="input-group col-4">
-                                    <label className="input-label">Email</label>
-                                    <input name="contactEmail" className="premium-input" value={form.contactEmail} onChange={handleChange} placeholder="email@domaine.com" />
-                                </div>
-                                <div className="input-group col-12">
-                                    <label className="input-label">Observations / Notes</label>
-                                    <textarea name="observations" rows="3" className="premium-textarea" value={form.observations} onChange={handleChange} placeholder="Commentaires internes..." />
-                                </div>
-                            </div>
+                        <div className="footer-actions">
+                            <button type="button" className="btn btn-secondary" onClick={() => navigate('/dossiers')}>Annuler</button>
+                            <button type="submit" className="btn btn-primary">
+                                <Save size={18} />
+                                Enregistrer les modifications
+                            </button>
                         </div>
+                    </form>
+                )}
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1rem' }}>
-                            <div className="checkbox-card" onClick={() => handleChange({ target: { name: 'isFacturable', type: 'checkbox', checked: !form.isFacturable } })}>
-                                <input type="checkbox" checked={form.isFacturable} readOnly />
-                                <div>
-                                    <div className="checkbox-label">Prêt pour facturation</div>
-                                    <div style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>Marquer comme éligible à la clôture financière</div>
-                                </div>
-                            </div>
-                            <div className="checkbox-card" onClick={() => handleChange({ target: { name: 'quotationStep', type: 'checkbox', checked: !form.quotationStep } })}>
-                                <input type="checkbox" checked={form.quotationStep} readOnly />
-                                <div>
-                                    <div className="checkbox-label">Étape de Cotation</div>
-                                    <div style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>Requiert l'imputation d'un déclarant</div>
-                                </div>
-                            </div>
-                        </div>
+                {activeTab === 'cotation' && (
+                    <div className="premium-card" style={{ padding: '0.5rem' }}>
+                        <CotationManager dossierId={id} />
                     </div>
+                )}
 
-                    <div className="footer-actions">
-                        <button type="button" className="btn btn-secondary" onClick={() => navigate('/dossiers')}>Annuler</button>
-                        <button type="submit" className="btn btn-primary">
-                            <Save size={18} />
-                            Enregistrer les modifications
-                        </button>
+                {activeTab === 'ot' && (
+                    <div className="premium-card" style={{ padding: '0.5rem' }}>
+                        <OrdreTransitManager dossierId={id} />
                     </div>
-                </form>
-
-                <div className="premium-card" style={{ padding: '0.5rem' }}>
-                    <CotationManager dossierId={id} />
-                </div>
+                )}
             </div>
         </div>
     );

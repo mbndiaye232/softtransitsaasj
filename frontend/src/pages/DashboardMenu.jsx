@@ -28,6 +28,8 @@ const menuItems = [
     { id: 'dossiers', label: 'Dossiers', icon: Briefcase, path: '/dossiers', color: '#ef4444' },
     { id: 'suivi', label: 'Suivi dossiers', icon: ClipboardList, path: '#', color: '#f59e0b' },
     { id: 'cotation', label: 'Cotation', icon: Layers, path: '/cotations', color: '#10b981' },
+    { id: 'ot', label: 'Ordre de Transit', icon: FileText, path: '/ordres-transit', color: '#f97316' },
+    { id: 'config-ot', label: 'Configuration OT', icon: Settings, path: '/config-transit', color: '#64748b' },
     { id: 'documents', label: 'Gestion documents', icon: FileText, path: '#', color: '#06b6d4' },
     { id: 'notes', label: 'Note de détail', icon: FileText, path: '/notes', color: '#3b82f6' },
     { id: 'finances', label: 'Etats financiers', icon: BarChart3, path: '#', color: '#6366f1' },

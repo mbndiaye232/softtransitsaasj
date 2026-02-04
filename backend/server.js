@@ -31,23 +31,51 @@ app.get('/api/health', (req, res) => {
 });
 
 // Import routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/structures', require('./routes/structures'));
-app.use('/api/pays', require('./routes/pays'));
-app.use('/api/clients', require('./routes/clients'));
-app.use('/api/statuts', require('./routes/statuts'));
-app.use('/api/transactions', require('./routes/transactions'));
-app.use('/api/groupes', require('./routes/groupes'));
-app.use('/api/users', require('./routes/users'));
-app.use('/api/dossiers', require('./routes/dossiers'));
-app.use('/api/notes', require('./routes/notes'));
-app.use('/api/produits', require('./routes/produits'));
-app.use('/api/regimes', require('./routes/regimes'));
-app.use('/api/devises', require('./routes/devises'));
-app.use('/api/taxes', require('./routes/taxes'));
-app.use('/api/tiers', require('./routes/tiers'));
-app.use('/api/cotations', require('./routes/cotations'));
-app.use('/api/statistics', require('./routes/statistics'));
+const authRoutes = require('./routes/auth');
+const structuresRoutes = require('./routes/structures');
+const paysRoutes = require('./routes/pays');
+const clientsRoutes = require('./routes/clients');
+const statutsRoutes = require('./routes/statuts');
+const transactionsRoutes = require('./routes/transactions');
+const groupesRoutes = require('./routes/groupes');
+const usersRoutes = require('./routes/users');
+const dossiersRoutes = require('./routes/dossiers');
+const notesRoutes = require('./routes/notes');
+const produitsRoutes = require('./routes/produits');
+const regimesRoutes = require('./routes/regimes');
+const devisesRoutes = require('./routes/devises');
+const taxesRoutes = require('./routes/taxes');
+const tiersRoutes = require('./routes/tiers');
+const cotationsRoutes = require('./routes/cotations');
+const statisticsRoutes = require('./routes/statistics');
+const activitesRoutes = require('./routes/activites');
+const incotermsRoutes = require('./routes/incoterms');
+const regimesOTRoutes = require('./routes/regimesOT');
+const typesDocumentsOTRoutes = require('./routes/typesDocumentsOT');
+const ordresTransitRoutes = require('./routes/ordresTransit');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/structures', structuresRoutes);
+app.use('/api/pays', paysRoutes);
+app.use('/api/clients', clientsRoutes);
+app.use('/api/statuts', statutsRoutes);
+app.use('/api/transactions', transactionsRoutes);
+app.use('/api/groupes', groupesRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/dossiers', dossiersRoutes);
+app.use('/api/notes', notesRoutes);
+app.use('/api/produits', produitsRoutes);
+app.use('/api/regimes', regimesRoutes);
+app.use('/api/devises', devisesRoutes);
+app.use('/api/taxes', taxesRoutes);
+app.use('/api/tiers', tiersRoutes);
+app.use('/api/cotations', cotationsRoutes);
+app.use('/api/statistics', statisticsRoutes);
+app.use('/api/activites', activitesRoutes);
+app.use('/api/incoterms', incotermsRoutes);
+app.use('/api/regimes-ot', regimesOTRoutes);
+app.use('/api/types-documents-ot', typesDocumentsOTRoutes);
+app.use('/api/ordres-transit', ordresTransitRoutes);
 // app.use('/api/credits', require('./routes/credits'));
 
 // Serve uploaded files

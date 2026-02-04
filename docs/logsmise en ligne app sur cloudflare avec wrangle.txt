@@ -1,0 +1,220 @@
+
+--- 2026-02-03T15:40:24.694Z debug
+🪵  Writing logs to "C:\Users\hp\AppData\Roaming\xdg.config\.wrangler\logs\wrangler-2026-02-03_15-40-24_080.log"
+---
+
+--- 2026-02-03T15:40:24.694Z debug
+.env file not found at "C:\softtransitsaasantigravity\softtransit\.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-02-03T15:40:24.696Z debug
+.env file not found at "C:\softtransitsaasantigravity\softtransit\.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-02-03T15:42:24.388Z log
+
+ ⛅️ wrangler 4.62.0
+───────────────────
+---
+
+--- 2026-02-03T15:42:24.428Z log
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+---
+
+--- 2026-02-03T15:42:24.435Z debug
+Metrics dispatcher: Posting data {"deviceId":"c276425d-85ec-4b77-8c9c-7bae38f66d62","event":"wrangler command started","timestamp":1770133344435,"properties":{"amplitude_session_id":1770133344422,"amplitude_event_id":0,"wranglerVersion":"4.62.0","wranglerMajorVersion":4,"wranglerMinorVersion":62,"wranglerPatchVersion":0,"osPlatform":"Windows","osVersion":"Windows 10 Pro","nodeVersion":24,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","agent":null,"sanitizedCommand":"deploy","sanitizedArgs":{}}}
+---
+
+--- 2026-02-03T15:42:24.532Z debug
+Saving to cache: {"account":{"id":"20ee281a19f6555a86b842e91b2f4dc4","name":""}}
+---
+
+--- 2026-02-03T15:42:24.535Z debug
+Starting verifyWorkerMatchesCITag() with tag: undefined, name: softtransit
+---
+
+--- 2026-02-03T15:42:24.535Z debug
+No WRANGLER_CI_MATCH_TAG variable provided, aborting verifyWorkerMatchesCITag()
+---
+
+--- 2026-02-03T15:42:24.538Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/20ee281a19f6555a86b842e91b2f4dc4/workers/services/softtransit
+---
+
+--- 2026-02-03T15:42:24.539Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:24.539Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:24.539Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:24.539Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-02-03T15:42:36.813Z debug
+-- START CF API RESPONSE: Not Found 404
+---
+
+--- 2026-02-03T15:42:36.814Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:36.814Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:36.814Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-02-03T15:42:36.820Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/20ee281a19f6555a86b842e91b2f4dc4/workers/scripts/softtransit/deployments
+---
+
+--- 2026-02-03T15:42:36.820Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:36.820Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:36.820Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:36.820Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-02-03T15:42:40.560Z debug
+-- START CF API RESPONSE: Not Found 404
+---
+
+--- 2026-02-03T15:42:40.560Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:40.561Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:40.561Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-02-03T15:42:40.603Z log
+Total Upload: 0.85 KiB / gzip: 0.46 KiB
+---
+
+--- 2026-02-03T15:42:40.604Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/20ee281a19f6555a86b842e91b2f4dc4/workers/scripts/softtransit/settings
+---
+
+--- 2026-02-03T15:42:40.604Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:40.605Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:40.605Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:40.605Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-02-03T15:42:42.350Z debug
+-- START CF API RESPONSE: Not Found 404
+---
+
+--- 2026-02-03T15:42:42.351Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:42.351Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:42.352Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-02-03T15:42:42.353Z debug
+No settings found
+---
+
+--- 2026-02-03T15:42:42.354Z debug
+Saving to cache: {"account":{"id":"20ee281a19f6555a86b842e91b2f4dc4","name":""}}
+---
+
+--- 2026-02-03T15:42:42.356Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/20ee281a19f6555a86b842e91b2f4dc4/queues
+---
+
+--- 2026-02-03T15:42:42.356Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:42.356Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:42.356Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:42.356Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-02-03T15:42:43.983Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-02-03T15:42:43.984Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:43.984Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-02-03T15:42:43.984Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-02-03T15:42:43.989Z debug
+Metrics dispatcher: Posting data {"deviceId":"c276425d-85ec-4b77-8c9c-7bae38f66d62","event":"wrangler command errored","timestamp":1770133363989,"properties":{"amplitude_session_id":1770133344422,"amplitude_event_id":1,"wranglerVersion":"4.62.0","wranglerMajorVersion":4,"wranglerMinorVersion":62,"wranglerPatchVersion":0,"osPlatform":"Windows","osVersion":"Windows 10 Pro","nodeVersion":24,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"argsUsed":[],"argsCombination":"","agent":null,"sanitizedCommand":"deploy","sanitizedArgs":{},"durationMs":139283,"errorType":"UserError"}}
+---
+
+--- 2026-02-03T15:42:43.992Z log
+
+---
+
+--- 2026-02-03T15:42:44.391Z error
+X [ERROR] Queue "my-queue" does not exist. To create it, run: wrangler queues create my-queue
+
+
+---
+
+--- 2026-02-03T15:42:44.427Z debug
+Error: Queue "my-queue" does not exist. To create it, run: wrangler queues create my-queue
+    at ensureQueuesExist (C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:265028:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async ensureQueuesExistByConfig (C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:265017:3)
+    at async deploy (C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:288675:7)
+    at async Object.handler (C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:219202:66)
+    at async C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:168793:26
+    at async Object.handler (C:\softtransitsaasantigravity\softtransit\node_modules\wrangler\wrangler-dist\cli.js:168742:7)
+---

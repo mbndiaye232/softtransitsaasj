@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { Plus, Search, Edit, Trash2, Globe, Mail, Phone, MapPin, Building2, UserCircle, Briefcase, Info, X, Save } from 'lucide-react'
-import { tiersAPI, statutsAPI } from '../services/api'
+import { Plus, Search, Edit, Trash2, Globe, Mail, Phone, MapPin, Building2, UserCircle, Briefcase, Info, X, Save, Tag } from 'lucide-react'
+import { tiersAPI, statutsAPI, activitesAPI } from '../services/api'
 
 export default function TiersPage() {
     const [tiers, setTiers] = useState([])
     const [statuts, setStatuts] = useState([])
+    const [activites, setActivites] = useState([])
     const [loading, setLoading] = useState(true)
     const [searchTerm, setSearchTerm] = useState('')
+    const [selectedActivity, setSelectedActivity] = useState('')
     const [error, setError] = useState('')
 
     // Modal State
@@ -21,7 +23,8 @@ export default function TiersPage() {
         NINEATiers: '',
         SiteWeb: '',
         IDStatuts: '',
-        Observations: ''
+        Observations: '',
+        activityIds: []
     })
 
     useEffect(() => {
@@ -31,12 +34,14 @@ export default function TiersPage() {
     const loadData = async () => {
         try {
             setLoading(true)
-            const [tiersRes, statutsRes] = await Promise.all([
+            const [tiersRes, statutsRes, activitesRes] = await Promise.all([
                 tiersAPI.getAll(),
-                statutsAPI.getAll()
+                statutsAPI.getAll(),
+                activitesAPI.getAll()
             ])
             setTiers(tiersRes.data)
             setStatuts(statutsRes.data)
+            setActivites(activitesRes.data)
             setError('')
         } catch (err) {
             console.error('Failed to load data:', err)
@@ -59,11 +64,17 @@ export default function TiersPage() {
         setSearchTerm(e.target.value)
     }
 
-    const filteredTiers = tiers.filter(tier =>
-        tier.libtier?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tier.NINEATiers?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tier.EmailTiers?.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    const filteredTiers = tiers.filter(tier => {
+        const matchesSearch =
+            tier.libtier?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            tier.NINEATiers?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            tier.EmailTiers?.toLowerCase().includes(searchTerm.toLowerCase());
+
+        const matchesActivity = !selectedActivity ||
+            (tier.activity_ids && tier.activity_ids.split(',').includes(selectedActivity.toString()));
+
+        return matchesSearch && matchesActivity;
+    })
 
     const handleEdit = (tier) => {
         setEditingTier(tier)
@@ -76,7 +87,8 @@ export default function TiersPage() {
             NINEATiers: tier.NINEATiers || '',
             SiteWeb: tier.SiteWeb || '',
             IDStatuts: tier.IDStatuts || '',
-            Observations: tier.Observations || ''
+            Observations: tier.Observations || '',
+            activityIds: tier.activity_ids ? tier.activity_ids.split(',').map(Number) : []
         })
         setShowModal(true)
     }
@@ -104,7 +116,8 @@ export default function TiersPage() {
             NINEATiers: '',
             SiteWeb: '',
             IDStatuts: '',
-            Observations: ''
+            Observations: '',
+            activityIds: []
         })
     }
 
@@ -126,6 +139,17 @@ export default function TiersPage() {
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData(prev => ({ ...prev, [name]: value }))
+    }
+
+    const handleActivityToggle = (activityId) => {
+        setFormData(prev => {
+            const currentIds = prev.activityIds || [];
+            if (currentIds.includes(activityId)) {
+                return { ...prev, activityIds: currentIds.filter(id => id !== activityId) };
+            } else {
+                return { ...prev, activityIds: [...currentIds, activityId] };
+            }
+        });
     }
 
     if (loading) return (
@@ -203,6 +227,16 @@ export default function TiersPage() {
                 .badge { padding: 0.25rem 0.625rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.025em; }
                 .badge-ninea { background: var(--slate-100); color: var(--slate-600); border: 1px solid var(--slate-200); }
                 .badge-statut { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+                .badge-activity { background: var(--primary-light); color: var(--primary); border: 1px solid var(--primary-light); font-size: 0.65rem; }
+
+                .activity-selector { display: flex; flex-direction: column; gap: 0.75rem; background: var(--slate-50); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border); }
+                .activity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+                .activity-item { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.5rem; border-radius: 0.375rem; transition: background 0.2s; }
+                .activity-item:hover { background: white; }
+                .activity-checkbox { width: 1.125rem; height: 1.125rem; border-radius: 4px; border: 2px solid var(--slate-300); appearance: none; cursor: pointer; position: relative; transition: all 0.2s; }
+                .activity-checkbox:checked { background: var(--primary); border-color: var(--primary); }
+                .activity-checkbox:checked::after { content: '✓'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: white; font-size: 0.75rem; font-weight: 900; }
+                .activity-label { font-size: 0.8125rem; font-weight: 600; color: var(--slate-700); }
 
                 /* Modal Professionalism */
                 .modal-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 2rem; }
@@ -258,6 +292,20 @@ export default function TiersPage() {
                             onChange={handleSearch}
                         />
                     </div>
+                    <div className="filter-group" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <Tag size={16} color="var(--slate-400)" />
+                        <select
+                            className="premium-select"
+                            style={{ padding: '0.5rem 1rem', width: 'auto', minWidth: '180px' }}
+                            value={selectedActivity}
+                            onChange={(e) => setSelectedActivity(e.target.value)}
+                        >
+                            <option value="">Toutes les activités</option>
+                            {activites.map(act => (
+                                <option key={act.id_activite} value={act.id_activite}>{act.libelle}</option>
+                            ))}
+                        </select>
+                    </div>
                     <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--slate-400)' }}>
                         {filteredTiers.length} TIERS ENREGISTRÉS
                     </div>
@@ -283,6 +331,9 @@ export default function TiersPage() {
                             <div className="tier-badges">
                                 {tier.NINEATiers && <span className="badge badge-ninea">NINEA: {tier.NINEATiers}</span>}
                                 {tier.statut_label && <span className="badge badge-statut">{tier.statut_label}</span>}
+                                {tier.activity_labels && tier.activity_labels.split(',').map((label, idx) => (
+                                    <span key={idx} className="badge badge-activity">{label}</span>
+                                ))}
                             </div>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', marginTop: '0.5rem' }}>
@@ -424,6 +475,24 @@ export default function TiersPage() {
                                             onChange={handleChange}
                                             rows="3"
                                         />
+                                    </div>
+                                    <div className="input-group form-col-full">
+                                        <label className="input-label">Activités</label>
+                                        <div className="activity-selector">
+                                            <div className="activity-grid">
+                                                {activites.map(act => (
+                                                    <label key={act.id_activite} className="activity-item">
+                                                        <input
+                                                            type="checkbox"
+                                                            className="activity-checkbox"
+                                                            checked={formData.activityIds?.includes(act.id_activite)}
+                                                            onChange={() => handleActivityToggle(act.id_activite)}
+                                                        />
+                                                        <span className="activity-label">{act.libelle}</span>
+                                                    </label>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
